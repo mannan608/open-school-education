@@ -1,0 +1,121 @@
+@php
+    $universities = [
+        ['name' => 'Stanford University', 'logo' => asset('frontend-img/patner/sponsor_1.png')],
+        ['name' => 'Harvard University', 'logo' => asset('frontend-img/patner/sponsor_2.png')],
+        ['name' => 'University of Oxford', 'logo' => asset('frontend-img/patner/sponsor_3.png')],
+        ['name' => 'MIT', 'logo' => asset('frontend-img/patner/sponsor_4.png')],
+        ['name' => 'University of Cambridge', 'logo' => asset('frontend-img/patner/sponsor_5.png')],
+        ['name' => 'Yale University', 'logo' => asset('frontend-img/patner/sponsor_6.png')],
+        ['name' => 'Princeton University', 'logo' => asset('frontend-img/patner/sponsor_7.png')],
+        ['name' => 'Columbia University', 'logo' => asset('frontend-img/patner/sponsor_8.png')],
+        ['name' => 'ETH Zurich', 'logo' => asset('frontend-img/patner/sponsor_9.png')],
+        ['name' => 'UC Berkeley', 'logo' => asset('frontend-img/patner/sponsor_10.png')],
+        ['name' => 'UC Berkeley', 'logo' => asset('frontend-img/patner/sponsor_11.png')],
+        ['name' => 'UC Berkeley', 'logo' => asset('frontend-img/patner/sponsor_12.png')],
+    ];
+@endphp
+
+<section class="py-16 md:py-20 lg:py-24 overflow-hidden defer-render">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 md:mb-5 lg:mb-6">
+        <header
+            class="mx-auto max-w-2xl px-4 lg:py-8 text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+
+            <div
+                class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-100 backdrop-blur-sm rounded-full border border-purple-200/50 mb-8 transition-all duration-700 delay-100">
+                <div class="relative"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-sparkles w-4 h-4 text-brand-600 animate-pulse transition-transform duration-500">
+                        <path
+                            d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z">
+                        </path>
+                        <path d="M20 3v4"></path>
+                        <path d="M22 5h-4"></path>
+                        <path d="M4 17v2"></path>
+                        <path d="M5 18H3"></path>
+                    </svg>
+                    <div class="absolute inset-0 w-4 h-4 bg-brand-500 blur-md animate-pulse"></div>
+                </div><span class="text-sm font-semibold bg-clip-text text-brand-600 uppercase">Global Network</span>
+
+            </div>
+
+            <!-- Main Heading -->
+            <h1
+                class="text-2xl sm:text-3xl font-extrabold tracking-tight text-neutral-900 md:text-4xl lg:text-5xl uppercase transition-all duration-700 delay-200">
+                Trusted By <span class="text-brand-500"> 2,000+
+                    Universities </span>
+            </h1>
+
+            <!-- Subheading Description -->
+            <p
+                class="mx-auto mt-4 max-w-2xl text-base text-neutral-600 sm:text-lg transition-all duration-700 delay-300">
+                Partnering with the world's leading educational institutions
+            </p>
+        </header>
+    </div>
+    <div class="relative space-y-5">
+        <div
+            class="absolute left-0 top-0 bottom-0 w-20 sm:w-32 lg:w-40 bg-gradient-to-r from-neutral-50 to-transparent z-20 pointer-events-none">
+        </div>
+        <div
+            class="absolute right-0 top-0 bottom-0 w-20 sm:w-32 lg:w-40 bg-gradient-to-l from-neutral-50 to-transparent z-20 pointer-events-none">
+        </div>
+        <div class="w-full overflow-hidden">
+            <div
+                class="flex w-max animate-[university-left-to-right_50s_linear_infinite] hover:[animation-play-state:paused]">
+                <div class="flex shrink-0 gap-5 pr-5">
+                    @foreach ($universities as $university)
+                        <div
+                            class="flex shrink-0 items-center gap-4 px-7 py-6 bg-white rounded-2xl border border-neutral-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-brand-500/30 group">
+                            <div class=" shrink-0 flex items-center justify-center">
+                                <img src="{{ $university['logo'] }}" alt="{{ $university['name'] }}"
+                                    class="max-w-full max-h-9.5 w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-110">
+                            </div>
+
+                        </div>
+                    @endforeach
+                </div>
+                <div class="flex shrink-0 gap-5 pr-5" aria-hidden="true">
+                    @foreach ($universities as $university)
+                        <div
+                            class="flex shrink-0 items-center gap-4 px-7 py-6 bg-white rounded-2xl border border-neutral-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-brand-500/30 group">
+                            <div class=" shrink-0 flex items-center justify-center">
+                                <img src="{{ $university['logo'] }}" alt="{{ $university['name'] }}"
+                                    class="max-w-full max-h-9.5 w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-110">
+                            </div>
+
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        <div class="w-full overflow-hidden">
+            <div
+                class="flex w-max animate-[university-right-to-left_50s_linear_infinite] hover:[animation-play-state:paused]">
+                <div class="flex shrink-0 gap-5 pr-5">
+                    @foreach ($universities as $university)
+                        <div
+                            class="flex shrink-0 items-center gap-4 px-7 py-6 bg-white rounded-2xl border border-neutral-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-brand-500/30 group">
+                            <div class=" shrink-0 flex items-center justify-center">
+                                <img src="{{ $university['logo'] }}" alt="{{ $university['name'] }}"
+                                    class="max-w-full max-h-9.5 w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-110">
+                            </div>
+
+                        </div>
+                    @endforeach
+                </div>
+                <div class="flex shrink-0 gap-5 pr-5" aria-hidden="true">
+                    @foreach ($universities as $university)
+                        <div
+                            class="flex shrink-0 items-center gap-4 px-7 py-6 bg-white rounded-2xl border border-neutral-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-brand-500/30 group">
+                            <div class=" shrink-0 flex items-center justify-center">
+                                <img src="{{ $university['logo'] }}" alt="{{ $university['name'] }}"
+                                    class="max-w-full max-h-9.5 w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-110">
+                            </div>
+
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+</section>
