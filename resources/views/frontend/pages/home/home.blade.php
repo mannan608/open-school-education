@@ -1,108 +1,168 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+
 {{-- =========================================================
-     FAQ
-========================================================== --}}
+    FAQ SECTION
+========================================================= --}}
 <section
     id="faq"
-    class="scroll-mt-28 bg-brand-lightBg py-20 lg:py-28"
+    class="relative overflow-hidden bg-slate-50 py-20 sm:py-24 lg:py-28"
 >
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    {{-- Background Decoration --}}
+    <div class="pointer-events-none absolute inset-0 overflow-hidden">
+        <div class="absolute -left-40 top-20 h-80 w-80 rounded-full bg-brand-cyan/5 blur-3xl"></div>
+        <div class="absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-brand-blue/5 blur-3xl"></div>
+    </div>
 
-        <div class="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        {{-- =====================================================
+            SECTION HEADER
+        ====================================================== --}}
+        <div class="mx-auto mb-14 max-w-3xl text-center lg:mb-16">
+
+            <div class="mb-5 inline-flex items-center gap-3 rounded-full border border-brand-cyan/20 bg-white px-4 py-2 shadow-sm">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-cyan/10">
+                    <i
+                        data-lucide="circle-help"
+                        class="h-4 w-4 text-brand-cyan"
+                    ></i>
+                </span>
+
+                <span class="text-[11px] font-black uppercase tracking-[0.22em] text-brand-blue">
+                    Frequently Asked Questions
+                </span>
+            </div>
+
+            <h2 class="text-3xl font-black leading-tight tracking-tight text-brand-navy sm:text-4xl lg:text-5xl">
+                Everything You Need
+                <span class="text-brand-cyan">
+                    To Know
+                </span>
+            </h2>
+
+            <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-500 sm:text-lg">
+                Find answers to the most common questions about Recognition of Prior Learning,
+                eligibility, evidence and the qualification process.
+            </p>
+
+        </div>
+
+
+        {{-- =====================================================
+            MAIN FAQ GRID
+        ====================================================== --}}
+        <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-10">
 
             {{-- =================================================
-                 FAQ LEFT CONTENT
+                LEFT INFORMATION CARD
             ================================================== --}}
-            <div class="lg:col-span-5">
+            <div class="lg:col-span-4">
 
-                <div class="lg:sticky lg:top-32">
+                <div class="lg:sticky lg:top-28">
 
-                    {{-- Heading --}}
-                    <div
-                        data-reveal
-                        class="-translate-x-12 opacity-0 transition-all duration-1000 ease-out"
-                    >
-                        <span
-                            class="inline-flex items-center gap-2.5 text-[11px] font-extrabold uppercase tracking-[0.25em] text-brand-cyan"
-                        >
-                            FAQ
+                    {{-- Intro Card --}}
+                    <div class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-8">
 
-                            <span class="h-px w-8 bg-brand-cyan/60"></span>
-                        </span>
+                        {{-- Decorative Icon --}}
+                        <div class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-cyan/5"></div>
 
-                        <h2
-                            class="mt-5 text-3xl font-black leading-[1.12] tracking-tight text-brand-navy sm:text-4xl lg:text-[2.6rem]"
-                        >
-                            Frequently Asked
-                            <span class="text-brand-cyan">
-                                Questions
-                            </span>
-                        </h2>
-
-                        <p
-                            class="mt-5 text-base leading-8 text-slate-500 sm:text-lg"
-                        >
-                            Everything you need to know about getting qualified through Recognition of Prior
-                            Learning.
-                        </p>
-                    </div>
-
-
-                    {{-- Contact Card --}}
-                    <div
-                        data-reveal
-                        class="translate-y-12 opacity-0 transition-all delay-200 duration-1000 ease-out"
-                    >
-                        <div
-                            class="mt-10 rounded-3xl border border-slate-200/70 bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
-                        >
+                        <div class="relative">
 
                             {{-- Icon --}}
-                            <span
-                                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-blue to-brand-cyan text-white shadow-lg shadow-brand-blue/25"
-                            >
+                            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-blue to-brand-cyan text-white shadow-lg shadow-brand-blue/20">
                                 <i
-                                    data-lucide="message-square"
-                                    class="h-6 w-6"
+                                    data-lucide="messages-square"
+                                    class="h-7 w-7"
                                 ></i>
-                            </span>
+                            </div>
 
-
-                            <h3
-                                class="mt-5 text-lg font-extrabold text-brand-navy"
-                            >
-                                Still have questions?
+                            <h3 class="mt-6 text-xl font-black tracking-tight text-brand-navy">
+                                Have more questions?
                             </h3>
 
-
-                            <p
-                                class="mt-2 text-sm leading-7 text-slate-500"
-                            >
-                                Our RPL specialists are happy to walk you through the process, evidence and
-                                pricing — obligation free.
+                            <p class="mt-3 text-sm leading-7 text-slate-500">
+                                Our RPL specialists can help you understand the assessment process,
+                                required evidence, eligibility and next steps.
                             </p>
 
-
+                            {{-- Contact Button --}}
                             <a
                                 href="mailto:info@openschooleducation.com"
-                                class="group mt-5 inline-flex items-center gap-2.5 rounded-xl border border-slate-200 px-5 py-3 text-xs font-extrabold uppercase tracking-wider text-brand-blue transition-all duration-500 hover:-translate-y-0.5 hover:border-brand-cyan hover:bg-brand-lightBg hover:shadow-lg"
+                                class="group mt-6 flex w-full items-center justify-between rounded-2xl bg-slate-50 px-4 py-4 transition-all duration-300 hover:bg-brand-lightBg"
                             >
-                                <i
-                                    data-lucide="mail"
-                                    class="h-4 w-4 text-brand-cyan"
-                                ></i>
+                                <span class="flex items-center gap-3">
 
-                                Email Our Team
+                                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-brand-cyan shadow-sm">
+                                        <i
+                                            data-lucide="mail"
+                                            class="h-5 w-5"
+                                        ></i>
+                                    </span>
 
-                                <i
-                                    data-lucide="arrow-right"
-                                    class="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1"
-                                ></i>
+                                    <span>
+                                        <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">
+                                            Email Us
+                                        </span>
+
+                                        <span class="mt-0.5 block text-sm font-extrabold text-brand-navy">
+                                            Our RPL Team
+                                        </span>
+                                    </span>
+
+                                </span>
+
+                                <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-brand-blue shadow-sm transition-transform duration-300 group-hover:translate-x-1">
+                                    <i
+                                        data-lucide="arrow-up-right"
+                                        class="h-4 w-4"
+                                    ></i>
+                                </span>
+
                             </a>
 
                         </div>
+
+                    </div>
+
+
+                    {{-- Quick Help --}}
+                    <div class="mt-5 rounded-3xl bg-brand-navy p-6 text-white shadow-xl shadow-brand-navy/10">
+
+                        <div class="flex items-start gap-4">
+
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10">
+                                <i
+                                    data-lucide="headphones"
+                                    class="h-5 w-5 text-brand-cyan"
+                                ></i>
+                            </div>
+
+                            <div>
+                                <p class="text-sm font-extrabold">
+                                    Need personal guidance?
+                                </p>
+
+                                <p class="mt-1 text-xs leading-6 text-slate-300">
+                                    Speak with our team about your experience and eligibility.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="#assessment-form"
+                            class="group mt-5 inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-brand-cyan"
+                        >
+                            Start Your Assessment
+
+                            <i
+                                data-lucide="arrow-right"
+                                class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                            ></i>
+                        </a>
+
                     </div>
 
                 </div>
@@ -111,73 +171,132 @@
 
 
             {{-- =================================================
-                 FAQ ACCORDION
+                FAQ ACCORDION
             ================================================== --}}
-            <div class="lg:col-span-7">
+            <div
+                class="lg:col-span-8"
+                x-data="{
+                    active: 0,
 
-                <div
-                    x-data="{ active: 0 }"
-                    class="space-y-4"
-                >
+                    faqs: [
+                        {
+                            question: 'Am I eligible for RPL recognition?',
+                            answer: 'If you have relevant work experience, informal training, or existing skills in automotive electrical systems — such as working 20+ hours per week on vehicle electrical services — you may be eligible. A free preliminary assessment will help determine your suitability.',
+                            icon: 'user-check'
+                        },
+                        {
+                            question: 'What evidence is required to qualify?',
+                            answer: 'Standard evidence typically includes work logs, photos or videos of completed work, employer references, a resume detailing relevant experience, payslips, or previous transcripts and certificates. An assessor confirms the exact requirements for your situation.',
+                            icon: 'file-check-2'
+                        },
+                        {
+                            question: 'How long does the RPL process take?',
+                            answer: 'The estimated duration is around 4–12 weeks depending on your existing experience, the quality of your evidence and any outstanding assessment requirements.',
+                            icon: 'clock-3'
+                        },
+                        {
+                            question: 'Is this qualification nationally recognised?',
+                            answer: 'Yes. AUR30320 – Certificate III in Automotive Electrical Technology is a nationally recognised qualification under the Australian Qualifications Framework, issued by our partner Registered Training Organisations (RTO 31518).',
+                            icon: 'badge-check'
+                        },
+                        {
+                            question: 'Do I need to attend any classes?',
+                            answer: 'No classroom attendance is required. RPL assesses the skills you already have. If small gaps are identified, targeted gap training may be recommended so you can complete the remaining units.',
+                            icon: 'graduation-cap'
+                        }
+                    ]
+                }"
+            >
 
-                    {{-- =================================================
-                         FAQ 01
-                    ================================================== --}}
-                    <div
-                        data-reveal
-                        class="translate-y-12 opacity-0 transition-all duration-1000 ease-out"
-                    >
+                <div class="space-y-4">
+
+                    <template x-for="(faq, index) in faqs" :key="index">
 
                         <div
-                            class="overflow-hidden rounded-2xl border bg-white transition-all duration-500"
+                            class="group overflow-hidden rounded-3xl border bg-white transition-all duration-500"
                             :class="
-                                active === 0
-                                    ? 'border-brand-cyan/50 shadow-xl shadow-brand-blue/10'
-                                    : 'border-slate-200/80 shadow-sm hover:border-brand-cyan/40'
+                                active === index
+                                    ? 'border-brand-cyan/40 shadow-xl shadow-brand-blue/10'
+                                    : 'border-slate-200/80 shadow-sm hover:-translate-y-0.5 hover:border-brand-cyan/30 hover:shadow-lg'
                             "
                         >
 
-                            {{-- Question --}}
+                            {{-- QUESTION --}}
                             <button
                                 type="button"
-                                @click="active = active === 0 ? null : 0"
-                                class="flex w-full items-center justify-between gap-5 p-5 text-left sm:p-6"
-                                :aria-expanded="active === 0"
+                                class="flex w-full items-center gap-4 p-5 text-left sm:p-6"
+                                @click="active = active === index ? null : index"
+                                :aria-expanded="active === index"
                             >
 
-                                <span class="flex items-center gap-4">
+                                {{-- Number / Icon --}}
+                                <div
+                                    class="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl transition-all duration-500"
+                                    :class="
+                                        active === index
+                                            ? 'bg-brand-cyan text-white shadow-lg shadow-brand-cyan/30'
+                                            : 'bg-brand-lightBg text-brand-blue group-hover:bg-brand-cyan/10'
+                                    "
+                                >
 
                                     <span
-                                        class="hidden text-xs font-black tracking-widest transition-colors duration-300 sm:block"
+                                        x-show="active !== index"
+                                        x-transition.opacity
+                                        class="absolute"
+                                    >
+                                        <i
+                                            :data-lucide="faq.icon"
+                                            class="h-5 w-5"
+                                        ></i>
+                                    </span>
+
+                                    <span
+                                        x-show="active === index"
+                                        x-transition.opacity
+                                        class="absolute"
+                                    >
+                                        <i
+                                            data-lucide="check"
+                                            class="h-5 w-5"
+                                        ></i>
+                                    </span>
+
+                                </div>
+
+
+                                {{-- Question --}}
+                                <span class="min-w-0 flex-1">
+
+                                    <span
+                                        class="mb-1 block text-[10px] font-black uppercase tracking-[0.18em]"
                                         :class="
-                                            active === 0
+                                            active === index
                                                 ? 'text-brand-cyan'
-                                                : 'text-slate-300'
+                                                : 'text-slate-400'
                                         "
                                     >
-                                        01
+                                        Question <span x-text="String(index + 1).padStart(2, '0')"></span>
                                     </span>
 
                                     <span
-                                        class="text-base font-extrabold tracking-tight text-brand-navy sm:text-lg"
-                                    >
-                                        Am I eligible for RPL recognition?
-                                    </span>
+                                        class="block text-base font-extrabold leading-6 tracking-tight text-brand-navy sm:text-lg"
+                                        x-text="faq.question"
+                                    ></span>
 
                                 </span>
 
 
-                                {{-- Plus Icon --}}
+                                {{-- Toggle --}}
                                 <span
-                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-500"
+                                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-all duration-500"
                                     :class="
-                                        active === 0
-                                            ? 'rotate-45 bg-brand-cyan text-white shadow-lg shadow-brand-cyan/40'
-                                            : 'bg-brand-lightBg text-brand-cyan'
+                                        active === index
+                                            ? 'rotate-180 border-brand-cyan bg-brand-cyan text-white'
+                                            : 'border-slate-200 bg-slate-50 text-brand-blue'
                                     "
                                 >
                                     <i
-                                        data-lucide="plus"
+                                        data-lucide="chevron-down"
                                         class="h-5 w-5"
                                     ></i>
                                 </span>
@@ -185,370 +304,76 @@
                             </button>
 
 
-                            {{-- Answer --}}
+                            {{-- ANSWER --}}
                             <div
-                                x-show="active === 0"
-                                x-collapse.duration.500ms
+                                x-show="active === index"
+                                x-collapse.duration.400ms
                             >
-                                <div class="min-h-0">
 
-                                    <p
-                                        class="px-5 pb-6 text-sm leading-7 text-slate-500 sm:px-6 sm:pl-[4.25rem]"
-                                    >
-                                        If you have relevant work experience, informal training, or existing
-                                        skills in automotive electrical systems — such as working 20+ hours
-                                        per week on vehicle electrical services — you may be eligible. A free
-                                        preliminary assessment will help determine your suitability.
-                                    </p>
+                                <div class="border-t border-slate-100 px-5 pb-6 pt-5 sm:px-6 sm:pb-7">
+
+                                    <div class="flex gap-4">
+
+                                        {{-- Answer Indicator --}}
+                                        <div class="hidden shrink-0 pt-1 sm:block">
+
+                                            <div class="h-8 w-px bg-brand-cyan/30"></div>
+
+                                        </div>
+
+                                        <p
+                                            class="text-sm leading-7 text-slate-500 sm:text-[15px]"
+                                            x-text="faq.answer"
+                                        ></p>
+
+                                    </div>
 
                                 </div>
+
                             </div>
 
                         </div>
 
+                    </template>
+
+                </div>
+
+
+                {{-- Bottom Help --}}
+                <div class="mt-6 flex flex-col gap-4 rounded-2xl border border-dashed border-slate-300 bg-white/70 p-5 sm:flex-row sm:items-center sm:justify-between">
+
+                    <div class="flex items-center gap-3">
+
+                        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-lightBg text-brand-cyan">
+                            <i
+                                data-lucide="help-circle"
+                                class="h-5 w-5"
+                            ></i>
+                        </span>
+
+                        <div>
+                            <p class="text-sm font-extrabold text-brand-navy">
+                                Can't find the answer?
+                            </p>
+
+                            <p class="text-xs text-slate-400">
+                                Our team is here to help.
+                            </p>
+                        </div>
+
                     </div>
 
-
-                    {{-- =================================================
-                         FAQ 02
-                    ================================================== --}}
-                    <div
-                        data-reveal
-                        class="translate-y-12 opacity-0 transition-all delay-100 duration-1000 ease-out"
+                    <a
+                        href="mailto:info@openschooleducation.com"
+                        class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-brand-blue transition-colors hover:text-brand-cyan"
                     >
-
-                        <div
-                            class="overflow-hidden rounded-2xl border bg-white transition-all duration-500"
-                            :class="
-                                active === 1
-                                    ? 'border-brand-cyan/50 shadow-xl shadow-brand-blue/10'
-                                    : 'border-slate-200/80 shadow-sm hover:border-brand-cyan/40'
-                            "
-                        >
-
-                            <button
-                                type="button"
-                                @click="active = active === 1 ? null : 1"
-                                class="flex w-full items-center justify-between gap-5 p-5 text-left sm:p-6"
-                                :aria-expanded="active === 1"
-                            >
-
-                                <span class="flex items-center gap-4">
-
-                                    <span
-                                        class="hidden text-xs font-black tracking-widest transition-colors duration-300 sm:block"
-                                        :class="
-                                            active === 1
-                                                ? 'text-brand-cyan'
-                                                : 'text-slate-300'
-                                        "
-                                    >
-                                        02
-                                    </span>
-
-                                    <span
-                                        class="text-base font-extrabold tracking-tight text-brand-navy sm:text-lg"
-                                    >
-                                        What evidence is required to qualify?
-                                    </span>
-
-                                </span>
-
-
-                                <span
-                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-500"
-                                    :class="
-                                        active === 1
-                                            ? 'rotate-45 bg-brand-cyan text-white shadow-lg shadow-brand-cyan/40'
-                                            : 'bg-brand-lightBg text-brand-cyan'
-                                    "
-                                >
-                                    <i
-                                        data-lucide="plus"
-                                        class="h-5 w-5"
-                                    ></i>
-                                </span>
-
-                            </button>
-
-
-                            <div
-                                x-show="active === 1"
-                                x-collapse.duration.500ms
-                            >
-                                <div class="min-h-0">
-
-                                    <p
-                                        class="px-5 pb-6 text-sm leading-7 text-slate-500 sm:px-6 sm:pl-[4.25rem]"
-                                    >
-                                        Standard evidence typically includes work logs, photos or videos of
-                                        completed work, employer references, a resume detailing relevant
-                                        experience, payslips, or previous transcripts and certificates. An
-                                        assessor confirms the exact requirements for your situation.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    {{-- =================================================
-                         FAQ 03
-                    ================================================== --}}
-                    <div
-                        data-reveal
-                        class="translate-y-12 opacity-0 transition-all delay-200 duration-1000 ease-out"
-                    >
-
-                        <div
-                            class="overflow-hidden rounded-2xl border bg-white transition-all duration-500"
-                            :class="
-                                active === 2
-                                    ? 'border-brand-cyan/50 shadow-xl shadow-brand-blue/10'
-                                    : 'border-slate-200/80 shadow-sm hover:border-brand-cyan/40'
-                            "
-                        >
-
-                            <button
-                                type="button"
-                                @click="active = active === 2 ? null : 2"
-                                class="flex w-full items-center justify-between gap-5 p-5 text-left sm:p-6"
-                                :aria-expanded="active === 2"
-                            >
-
-                                <span class="flex items-center gap-4">
-
-                                    <span
-                                        class="hidden text-xs font-black tracking-widest transition-colors duration-300 sm:block"
-                                        :class="
-                                            active === 2
-                                                ? 'text-brand-cyan'
-                                                : 'text-slate-300'
-                                        "
-                                    >
-                                        03
-                                    </span>
-
-                                    <span
-                                        class="text-base font-extrabold tracking-tight text-brand-navy sm:text-lg"
-                                    >
-                                        How long does the RPL process take?
-                                    </span>
-
-                                </span>
-
-
-                                <span
-                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-500"
-                                    :class="
-                                        active === 2
-                                            ? 'rotate-45 bg-brand-cyan text-white shadow-lg shadow-brand-cyan/40'
-                                            : 'bg-brand-lightBg text-brand-cyan'
-                                    "
-                                >
-                                    <i
-                                        data-lucide="plus"
-                                        class="h-5 w-5"
-                                    ></i>
-                                </span>
-
-                            </button>
-
-
-                            <div
-                                x-show="active === 2"
-                                x-collapse.duration.500ms
-                            >
-                                <div class="min-h-0">
-
-                                    <p
-                                        class="px-5 pb-6 text-sm leading-7 text-slate-500 sm:px-6 sm:pl-[4.25rem]"
-                                    >
-                                        The estimated duration is around 4–12 weeks depending on your
-                                        existing experience, the quality of your evidence and any outstanding
-                                        assessment requirements.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    {{-- =================================================
-                         FAQ 04
-                    ================================================== --}}
-                    <div
-                        data-reveal
-                        class="translate-y-12 opacity-0 transition-all delay-300 duration-1000 ease-out"
-                    >
-
-                        <div
-                            class="overflow-hidden rounded-2xl border bg-white transition-all duration-500"
-                            :class="
-                                active === 3
-                                    ? 'border-brand-cyan/50 shadow-xl shadow-brand-blue/10'
-                                    : 'border-slate-200/80 shadow-sm hover:border-brand-cyan/40'
-                            "
-                        >
-
-                            <button
-                                type="button"
-                                @click="active = active === 3 ? null : 3"
-                                class="flex w-full items-center justify-between gap-5 p-5 text-left sm:p-6"
-                                :aria-expanded="active === 3"
-                            >
-
-                                <span class="flex items-center gap-4">
-
-                                    <span
-                                        class="hidden text-xs font-black tracking-widest transition-colors duration-300 sm:block"
-                                        :class="
-                                            active === 3
-                                                ? 'text-brand-cyan'
-                                                : 'text-slate-300'
-                                        "
-                                    >
-                                        04
-                                    </span>
-
-                                    <span
-                                        class="text-base font-extrabold tracking-tight text-brand-navy sm:text-lg"
-                                    >
-                                        Is this qualification nationally recognised?
-                                    </span>
-
-                                </span>
-
-
-                                <span
-                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-500"
-                                    :class="
-                                        active === 3
-                                            ? 'rotate-45 bg-brand-cyan text-white shadow-lg shadow-brand-cyan/40'
-                                            : 'bg-brand-lightBg text-brand-cyan'
-                                    "
-                                >
-                                    <i
-                                        data-lucide="plus"
-                                        class="h-5 w-5"
-                                    ></i>
-                                </span>
-
-                            </button>
-
-
-                            <div
-                                x-show="active === 3"
-                                x-collapse.duration.500ms
-                            >
-                                <div class="min-h-0">
-
-                                    <p
-                                        class="px-5 pb-6 text-sm leading-7 text-slate-500 sm:px-6 sm:pl-[4.25rem]"
-                                    >
-                                        Yes. AUR30320 – Certificate III in Automotive Electrical Technology
-                                        is a nationally recognised qualification under the Australian
-                                        Qualifications Framework, issued by our partner Registered Training
-                                        Organisations (RTO 31518).
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    {{-- =================================================
-                         FAQ 05
-                    ================================================== --}}
-                    <div
-                        data-reveal
-                        class="translate-y-12 opacity-0 transition-all delay-300 duration-1000 ease-out"
-                    >
-
-                        <div
-                            class="overflow-hidden rounded-2xl border bg-white transition-all duration-500"
-                            :class="
-                                active === 4
-                                    ? 'border-brand-cyan/50 shadow-xl shadow-brand-blue/10'
-                                    : 'border-slate-200/80 shadow-sm hover:border-brand-cyan/40'
-                            "
-                        >
-
-                            <button
-                                type="button"
-                                @click="active = active === 4 ? null : 4"
-                                class="flex w-full items-center justify-between gap-5 p-5 text-left sm:p-6"
-                                :aria-expanded="active === 4"
-                            >
-
-                                <span class="flex items-center gap-4">
-
-                                    <span
-                                        class="hidden text-xs font-black tracking-widest transition-colors duration-300 sm:block"
-                                        :class="
-                                            active === 4
-                                                ? 'text-brand-cyan'
-                                                : 'text-slate-300'
-                                        "
-                                    >
-                                        05
-                                    </span>
-
-                                    <span
-                                        class="text-base font-extrabold tracking-tight text-brand-navy sm:text-lg"
-                                    >
-                                        Do I need to attend any classes?
-                                    </span>
-
-                                </span>
-
-
-                                <span
-                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-500"
-                                    :class="
-                                        active === 4
-                                            ? 'rotate-45 bg-brand-cyan text-white shadow-lg shadow-brand-cyan/40'
-                                            : 'bg-brand-lightBg text-brand-cyan'
-                                    "
-                                >
-                                    <i
-                                        data-lucide="plus"
-                                        class="h-5 w-5"
-                                    ></i>
-                                </span>
-
-                            </button>
-
-
-                            <div
-                                x-show="active === 4"
-                                x-collapse.duration.500ms
-                            >
-                                <div class="min-h-0">
-
-                                    <p
-                                        class="px-5 pb-6 text-sm leading-7 text-slate-500 sm:px-6 sm:pl-[4.25rem]"
-                                    >
-                                        No classroom attendance is required. RPL assesses the skills you
-                                        already have. If small gaps are identified, targeted gap training may
-                                        be recommended so you can complete the remaining units.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
+                        Contact Us
+
+                        <i
+                            data-lucide="arrow-right"
+                            class="h-4 w-4"
+                        ></i>
+                    </a>
 
                 </div>
 
@@ -558,155 +383,172 @@
 
     </div>
 </section>
-
 
 
 {{-- =========================================================
-     FINAL CTA
-========================================================== --}}
-<section class="bg-white py-20 lg:py-24">
+    FINAL CTA
+========================================================= --}}
+<section class="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div
-            data-reveal
-            class="scale-95 opacity-0 transition-all duration-1000 ease-out"
-        >
+        <div class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-navy via-brand-blue to-brand-deep px-6 py-14 shadow-2xl shadow-brand-navy/20 sm:px-10 sm:py-16 lg:rounded-[2.5rem] lg:px-20 lg:py-20">
 
-            <div
-                class="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-brand-blue via-brand-navy to-brand-deep px-6 py-16 text-center text-white shadow-2xl shadow-brand-navy/30 sm:px-12 lg:px-20 lg:py-20"
-            >
+            {{-- =================================================
+                BACKGROUND PATTERN
+            ================================================== --}}
+            <div class="pointer-events-none absolute inset-0 opacity-40">
 
-                {{-- Background Grid --}}
-                <div
-                    class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:52px_52px] [mask-image:radial-gradient(ellipse_70%_80%_at_50%_50%,black,transparent)]"
-                ></div>
+                <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+
+            </div>
 
 
-                {{-- Decorative Circles --}}
-                <div
-                    class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border border-brand-cyan/25 transition-transform duration-1000 hover:scale-110"
-                ></div>
+            {{-- Glow --}}
+            <div class="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-cyan/20 blur-3xl"></div>
 
-                <div
-                    class="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full border border-brand-cyan/35 transition-transform duration-1000 hover:scale-110"
-                ></div>
-
-                <div
-                    class="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-brand-cyan/15 blur-3xl"
-                ></div>
+            <div class="pointer-events-none absolute -bottom-40 -left-20 h-96 w-96 rounded-full bg-brand-blue/40 blur-3xl"></div>
 
 
-                {{-- CTA Content --}}
-                <div class="relative z-10">
+            {{-- Rings --}}
+            <div class="pointer-events-none absolute -right-20 -top-20 hidden h-72 w-72 rounded-full border border-white/10 sm:block"></div>
 
-                    {{-- Badge --}}
-                    <span
-                        class="inline-flex items-center gap-2.5 rounded-full border border-brand-cyan/40 bg-brand-cyan/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-cyanSoft"
-                    >
+            <div class="pointer-events-none absolute -right-8 -top-8 hidden h-48 w-48 rounded-full border border-brand-cyan/20 sm:block"></div>
+
+
+            {{-- =================================================
+                CONTENT
+            ================================================== --}}
+            <div class="relative z-10 mx-auto max-w-4xl text-center">
+
+                {{-- Badge --}}
+                <div class="inline-flex items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/5 px-4 py-2 backdrop-blur">
+
+                    <span class="flex h-5 w-5 items-center justify-center rounded-full bg-brand-cyan/20">
+                        <i
+                            data-lucide="sparkles"
+                            class="h-3 w-3 text-brand-cyan"
+                        ></i>
+                    </span>
+
+                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-brand-cyan">
                         Ready To Get Started?
                     </span>
 
+                </div>
 
-                    {{-- Heading --}}
-                    <h2
-                        class="mx-auto mt-6 max-w-3xl text-3xl font-black leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl"
+
+                {{-- Heading --}}
+                <h2 class="mt-6 text-3xl font-black leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl">
+                    Turn Your Experience Into a
+                    <span class="bg-gradient-to-r from-brand-cyan to-brand-cyanPale bg-clip-text text-transparent">
+                        Qualification.
+                    </span>
+                </h2>
+
+
+                {{-- Description --}}
+                <p class="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base sm:leading-8 lg:text-lg">
+                    Find out whether your existing automotive electrical skills can qualify you
+                    for RPL — it takes less than a minute and costs nothing.
+                </p>
+
+
+                {{-- =================================================
+                    CTA BUTTONS
+                ================================================== --}}
+                <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+
+                    {{-- Primary --}}
+                    <a
+                        href="#assessment-form"
+                        class="group inline-flex items-center justify-center gap-3 rounded-2xl bg-brand-cyan px-7 py-4 text-sm font-black uppercase tracking-wider text-white shadow-xl shadow-brand-cyan/25 transition-all duration-300 hover:-translate-y-1 hover:bg-brand-cyanHover hover:shadow-2xl hover:shadow-brand-cyan/30"
                     >
-                        Turn Your Experience Into a
-
-                        <span
-                            class="bg-gradient-to-r from-brand-cyan to-brand-cyanPale bg-clip-text text-transparent"
-                        >
-                            Qualification.
-                        </span>
-                    </h2>
-
-
-                    {{-- Description --}}
-                    <p
-                        class="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg"
-                    >
-                        Find out whether your existing automotive electrical skills can qualify you for RPL —
-                        it takes less than a minute and costs nothing.
-                    </p>
-
-
-                    {{-- Buttons --}}
-                    <div
-                        class="mt-9 flex flex-wrap items-center justify-center gap-4"
-                    >
-
-                        {{-- Primary --}}
-                        <a
-                            href="#assessment-form"
-                            class="group inline-flex items-center gap-3 rounded-xl bg-brand-cyan px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white shadow-xl shadow-brand-cyan/30 transition-all duration-500 hover:-translate-y-1 hover:bg-brand-cyanHover hover:shadow-2xl hover:shadow-brand-cyan/50"
-                        >
+                        <span>
                             Check My Eligibility
+                        </span>
+
+                        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-white/15">
 
                             <i
                                 data-lucide="arrow-right"
-                                class="h-5 w-5 transition-transform duration-500 group-hover:translate-x-1.5"
-                            ></i>
-                        </a>
-
-
-                        {{-- Secondary --}}
-                        <a
-                            href="mailto:info@openschooleducation.com"
-                            class="inline-flex items-center gap-2.5 rounded-xl border border-white/20 bg-white/5 px-7 py-4 text-sm font-bold text-white backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan/60 hover:bg-white/10"
-                        >
-                            <i
-                                data-lucide="mail"
-                                class="h-4 w-4 text-brand-cyan"
+                                class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                             ></i>
 
-                            Email Our Team
-                        </a>
+                        </span>
 
-                    </div>
+                    </a>
 
 
-                    {{-- Trust Points --}}
-                    <div
-                        class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3"
+                    {{-- Secondary --}}
+                    <a
+                        href="mailto:info@openschooleducation.com"
+                        class="inline-flex items-center justify-center gap-2.5 rounded-2xl border border-white/15 bg-white/5 px-7 py-4 text-sm font-bold text-white backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-brand-cyan/40 hover:bg-white/10"
                     >
 
-                        <span
-                            class="flex items-center gap-2 text-xs font-bold text-slate-300"
-                        >
+                        <i
+                            data-lucide="mail"
+                            class="h-4 w-4 text-brand-cyan"
+                        ></i>
+
+                        Email Our Team
+
+                    </a>
+
+                </div>
+
+
+                {{-- =================================================
+                    TRUST POINTS
+                ================================================== --}}
+                <div class="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
+
+                    <span class="inline-flex items-center gap-2 text-xs font-bold text-slate-300">
+
+                        <span class="flex h-5 w-5 items-center justify-center rounded-full bg-brand-cyan/10">
                             <i
                                 data-lucide="shield-check"
-                                class="h-4 w-4 text-brand-cyan"
+                                class="h-3.5 w-3.5 text-brand-cyan"
                             ></i>
-
-                            Free assessment
                         </span>
 
+                        Free assessment
 
-                        <span
-                            class="flex items-center gap-2 text-xs font-bold text-slate-300"
-                        >
+                    </span>
+
+
+                    <span class="hidden h-4 w-px bg-white/10 sm:block"></span>
+
+
+                    <span class="inline-flex items-center gap-2 text-xs font-bold text-slate-300">
+
+                        <span class="flex h-5 w-5 items-center justify-center rounded-full bg-brand-cyan/10">
                             <i
-                                data-lucide="clock"
-                                class="h-4 w-4 text-brand-cyan"
+                                data-lucide="clock-3"
+                                class="h-3.5 w-3.5 text-brand-cyan"
                             ></i>
-
-                            60-second check
                         </span>
 
+                        60-second process
 
-                        <span
-                            class="flex items-center gap-2 text-xs font-bold text-slate-300"
-                        >
+                    </span>
+
+
+                    <span class="hidden h-4 w-px bg-white/10 sm:block"></span>
+
+
+                    <span class="inline-flex items-center gap-2 text-xs font-bold text-slate-300">
+
+                        <span class="flex h-5 w-5 items-center justify-center rounded-full bg-brand-cyan/10">
                             <i
                                 data-lucide="badge-check"
-                                class="h-4 w-4 text-brand-cyan"
+                                class="h-3.5 w-3.5 text-brand-cyan"
                             ></i>
-
-                            Price match guarantee
                         </span>
 
-                    </div>
+                        Expert guidance
+
+                    </span>
 
                 </div>
 
@@ -718,362 +560,28 @@
 
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
 
-        /* ================================
-           Lucide Icons
-        ================================= */
+{{-- =========================================================
+    LUCIDE ICON INITIALISATION
+========================================================= --}}
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
+    });
 
-
-        /* ================================
-           Footer Year
-        ================================= */
-        const year = document.getElementById('year');
-
-        if (year) {
-            year.textContent = new Date().getFullYear();
-        }
-
-
-        /* ================================
-           Scroll Reveal
-        ================================= */
-        const revealElements =
-            document.querySelectorAll('[data-reveal]');
-
-        if (revealElements.length) {
-
-            const revealObserver =
-                new IntersectionObserver(
-                    function (entries, observer) {
-
-                        entries.forEach(function (entry) {
-
-                            if (!entry.isIntersecting) {
-                                return;
-                            }
-
-                            entry.target.classList.remove(
-                                'opacity-0',
-                                'translate-y-12',
-                                '-translate-y-12',
-                                'translate-x-12',
-                                '-translate-x-12',
-                                'scale-95'
-                            );
-
-                            observer.unobserve(entry.target);
-                        });
-
-                    },
-                    {
-                        threshold: 0.12,
-                        rootMargin: '0px 0px -60px 0px'
-                    }
-                );
-
-
-            revealElements.forEach(function (element) {
-                revealObserver.observe(element);
-            });
-        }
-
-
-        /* ================================
-           Navbar Shadow
-        ================================= */
-        const navbar =
-            document.getElementById('navbar');
-
-        if (navbar) {
-
-            function updateNavbar() {
-
-                const scrolled =
-                    window.scrollY > 12;
-
-                navbar.classList.toggle(
-                    'shadow-lg',
-                    scrolled
-                );
-
-                navbar.classList.toggle(
-                    'shadow-brand-blue/10',
-                    scrolled
-                );
-
-                navbar.classList.toggle(
-                    'border-slate-200',
-                    scrolled
-                );
-
-                navbar.classList.toggle(
-                    'border-slate-100',
-                    !scrolled
-                );
-            }
-
-
-            updateNavbar();
-
-            window.addEventListener(
-                'scroll',
-                updateNavbar,
-                {
-                    passive: true
+    document.addEventListener('alpine:init', () => {
+        Alpine.effect(() => {
+            setTimeout(() => {
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
                 }
-            );
-        }
-
-
-        /* ================================
-           Animated Counters
-        ================================= */
-        const statsSection =
-            document.getElementById('stats');
-
-        if (statsSection) {
-
-            let counted = false;
-
-            const statsObserver =
-                new IntersectionObserver(
-                    function (entries, observer) {
-
-                        if (
-                            !entries[0].isIntersecting ||
-                            counted
-                        ) {
-                            return;
-                        }
-
-                        counted = true;
-
-
-                        document
-                            .querySelectorAll('[data-count]')
-                            .forEach(function (element) {
-
-                                const target =
-                                    parseFloat(
-                                        element.dataset.count || 0
-                                    );
-
-                                const decimals =
-                                    parseInt(
-                                        element.dataset.decimals || 0,
-                                        10
-                                    );
-
-                                const suffix =
-                                    element.dataset.suffix || '';
-
-                                const duration = 1800;
-
-                                const start =
-                                    performance.now();
-
-
-                                function animate(currentTime) {
-
-                                    const progress =
-                                        Math.min(
-                                            (currentTime - start) /
-                                            duration,
-                                            1
-                                        );
-
-                                    const eased =
-                                        1 -
-                                        Math.pow(
-                                            1 - progress,
-                                            3
-                                        );
-
-                                    element.textContent =
-                                        (
-                                            target * eased
-                                        ).toFixed(decimals) +
-                                        suffix;
-
-
-                                    if (progress < 1) {
-                                        requestAnimationFrame(
-                                            animate
-                                        );
-                                    }
-                                }
-
-
-                                requestAnimationFrame(animate);
-                            });
-
-
-                        observer.unobserve(statsSection);
-                    },
-                    {
-                        threshold: 0.3
-                    }
-                );
-
-
-            statsObserver.observe(statsSection);
-        }
-
-
-        /* ================================
-           Assessment Form
-        ================================= */
-        const leadForm =
-            document.getElementById('lead-form');
-
-        if (leadForm) {
-
-            const submitBtn =
-                document.getElementById('submit-btn');
-
-            const formBody =
-                document.getElementById('form-body');
-
-            const formSuccess =
-                document.getElementById('form-success');
-
-            const resetBtn =
-                document.getElementById('form-reset');
-
-
-            leadForm.addEventListener(
-                'submit',
-                function (event) {
-
-                    event.preventDefault();
-
-
-                    if (submitBtn) {
-
-                        submitBtn.disabled = true;
-
-                        submitBtn.classList.add(
-                            'cursor-not-allowed',
-                            'opacity-80'
-                        );
-
-
-                        const textNode =
-                            submitBtn.firstChild;
-
-                        if (textNode) {
-                            textNode.textContent =
-                                'Submitting ';
-                        }
-                    }
-
-
-                    setTimeout(function () {
-
-                        const nameInput =
-                            document.getElementById('name');
-
-                        const firstName =
-                            nameInput
-                                ? nameInput.value
-                                    .trim()
-                                    .split(' ')[0]
-                                : '';
-
-
-                        const successName =
-                            document.getElementById(
-                                'success-name'
-                            );
-
-
-                        if (successName) {
-
-                            successName.textContent =
-                                firstName
-                                    ? ', ' + firstName
-                                    : '';
-                        }
-
-
-                        if (formBody) {
-                            formBody.classList.add('hidden');
-                        }
-
-
-                        if (formSuccess) {
-
-                            formSuccess.classList.remove(
-                                'hidden'
-                            );
-
-                            formSuccess.classList.add(
-                                'flex'
-                            );
-                        }
-
-                    }, 1100);
-                }
-            );
-
-
-            if (resetBtn) {
-
-                resetBtn.addEventListener(
-                    'click',
-                    function () {
-
-                        leadForm.reset();
-
-
-                        if (submitBtn) {
-
-                            submitBtn.disabled = false;
-
-                            submitBtn.classList.remove(
-                                'cursor-not-allowed',
-                                'opacity-80'
-                            );
-
-
-                            const textNode =
-                                submitBtn.firstChild;
-
-                            if (textNode) {
-
-                                textNode.textContent =
-                                    'Submit Assessment ';
-                            }
-                        }
-
-
-                        if (formSuccess) {
-
-                            formSuccess.classList.add(
-                                'hidden'
-                            );
-
-                            formSuccess.classList.remove(
-                                'flex'
-                            );
-                        }
-
-
-                        if (formBody) {
-                            formBody.classList.remove(
-                                'hidden'
-                            );
-                        }
-                    }
-                );
-            }
-        }
-
+            }, 0);
+        });
     });
 </script>
+@endpush
+
 @endsection
