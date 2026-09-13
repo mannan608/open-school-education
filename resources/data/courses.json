@@ -1,0 +1,161 @@
+[
+    {
+        "code": "AUR30320",
+        "category_slug": "automotive-retail-service-and-repair",
+        "level": "Certificate III",
+        "name": "Certificate III in Automotive Electrical Technology",
+        "description": "This qualification reflects the role of individuals who perform a broad range of tasks on a variety of light vehicles in the automotive retail, service and repair industry.",
+        "providers": "Australis College / NOMI COLLEGE",
+        "rto_code": "31518",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "code": "AUR30620",
+        "category_slug": "automotive-retail-service-and-repair",
+        "level": "Certificate III",
+        "name": "Certificate III in Light Vehicle Mechanical Technology",
+        "description": "This qualification reflects the role of individuals who perform a broad range of tasks on light vehicles in the automotive retail, service and repair sector.",
+        "providers": "Australis College / NOMI COLLEGE / AVM Skills Institute",
+        "rto_code": "31518 & 46359",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "code": "AUR40226",
+        "category_slug": "automotive-retail-service-and-repair",
+        "level": "Certificate IV",
+        "name": "Certificate IV in Automotive Mechanical Diagnosis",
+        "description": "Covers advanced diagnostic skills and supervisory roles within mechanical servicing operations across various automotive domain specializations.",
+        "providers": "AVM Skills Institute",
+        "rto_code": "46359",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "code": "AUR50216",
+        "category_slug": "automotive-retail-service-and-repair",
+        "level": "Diploma",
+        "name": "Diploma of Automotive Technology",
+        "description": "Designed for senior automotive technicians and workshop managers seeking high-level diagnostic, leadership and operational skills.",
+        "providers": "AVM Skills Institute",
+        "rto_code": "46359",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop"
+    },
+
+    {
+        "code": "CHC30121",
+        "category_slug": "early-childhood-education-and-care",
+        "level": "Certificate III",
+        "name": "Certificate III in Early Childhood Education and Care",
+        "description": "This qualification provides the skills and knowledge required to work in early childhood education and care.",
+        "providers": "Example College",
+        "rto_code": "12345",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "code": "CHC50121",
+        "category_slug": "early-childhood-education-and-care",
+        "level": "Diploma",
+        "name": "Diploma of Early Childhood Education and Care",
+        "description": "This qualification is designed for professionals who want to develop advanced skills in early childhood education and care.",
+        "providers": "Example College",
+        "rto_code": "12345",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop"
+    },
+
+    {
+        "code": "ICT40120",
+        "category_slug": "information-technology",
+        "level": "Certificate IV",
+        "name": "Certificate IV in Information Technology",
+        "description": "Develop practical information technology skills for modern digital workplaces.",
+        "providers": "Example Technology College",
+        "rto_code": "45678",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "code": "ICT50220",
+        "category_slug": "information-technology",
+        "level": "Diploma",
+        "name": "Diploma of Information Technology",
+        "description": "Build advanced technical skills across software development, networking and information technology.",
+        "providers": "Example Technology College",
+        "rto_code": "45678",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
+    },
+
+    {
+        "code": "BSB40120",
+        "category_slug": "business-and-management",
+        "level": "Certificate IV",
+        "name": "Certificate IV in Business",
+        "description": "Develop practical business skills across administration, operations and workplace management.",
+        "providers": "Example Business College",
+        "rto_code": "56789",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "code": "BSB50120",
+        "category_slug": "business-and-management",
+        "level": "Diploma",
+        "name": "Diploma of Business",
+        "description": "Develop advanced business knowledge and management skills for professional environments.",
+        "providers": "Example Business College",
+        "rto_code": "56789",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=800&auto=format&fit=crop"
+    },
+
+    {
+        "code": "SIT30821",
+        "category_slug": "hospitality-and-cookery",
+        "level": "Certificate III",
+        "name": "Certificate III in Commercial Cookery",
+        "description": "Develop practical cooking and food preparation skills for commercial kitchen environments.",
+        "providers": "Example Hospitality College",
+        "rto_code": "67890",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "code": "SIT50422",
+        "category_slug": "hospitality-and-cookery",
+        "level": "Diploma",
+        "name": "Diploma of Hospitality Management",
+        "description": "Develop management and operational skills for hospitality businesses and service environments.",
+        "providers": "Example Hospitality College",
+        "rto_code": "67890",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop"
+    },
+
+    {
+        "code": "CHC42021",
+        "category_slug": "community-services",
+        "level": "Certificate IV",
+        "name": "Certificate IV in Community Services",
+        "description": "Develop skills required to provide support and services to individuals and communities.",
+        "providers": "Example Community College",
+        "rto_code": "78901",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "code": "CHC52021",
+        "category_slug": "community-services",
+        "level": "Diploma",
+        "name": "Diploma of Community Services",
+        "description": "Build advanced skills for professional roles in community services and support environments.",
+        "providers": "Example Community College",
+        "rto_code": "78901",
+        "duration": "Flexible Pathways",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop"
+    }
+]

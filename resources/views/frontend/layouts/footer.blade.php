@@ -4,65 +4,67 @@
       <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
         <div class="col-span-2">
           <div class="flex items-center space-x-2 mb-4 -mt-5">
-            <div class="w-40 p-1.5">
+            <div class=" p-1.5">
                     <a href="/">
                         <img src="{{ asset('logo.png') }}" alt="logo" class="w-auto h-auto">
                     </a>
                 </div>
           </div>
           <p class="text-[15px] text-slate-400 max-w-sm leading-relaxed mb-6">
-            Connecting international students with premier educational institutions across Australia.
+           <span class="font-bold"> Empower Your Career Through Recognition</span><br>
+
+Turn your valuable work experience into nationally recognized qualifications with Open School Education. With over a decade of experience, we help professionals across IT, Business, Construction, Health, and more achieve recognized qualifications—without the need for traditional study. Get qualified, advance your career, and take the next step with confidence.
           </p>
-          <div class="flex space-x-3">
-            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-facebook-f text-base"></i></a>
-            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-twitter text-base"></i></a>
-            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-instagram text-base"></i></a>
-            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-linkedin-in text-base"></i></a>
-          </div>
+          
         </div>
 
         <div>
           <h4 class="text-white text-base font-bold uppercase tracking-wider mb-4">About us</h4>
           <ul class="space-y-2 text-[15px]">
-            <li><a href="{{ route('about') }}" class="hover:text-brand-400 transition">About HBD Services</a></li>
-            <li><a href="#" class="hover:text-brand-400 transition">Book Your Appointment</a></li>
-            <li><a href="#" class="hover:text-brand-400 transition">IELTS/PTE Registration</a></li>
-            <li><a href="#" class="hover:text-brand-400 transition">Claims</a></li>
-            <li><a href="#" class="hover:text-brand-400 transition">Referral Program</a></li>
+            <li><a href="{{ route('about') }}" class="hover:text-brand-400 transition">About Us</a></li>
+            <li><a href="#" class="hover:text-brand-400 transition">FAQs</a></li>
+            <li><a href="#" class="hover:text-brand-400 transition">Our Partners</a></li>
+            <li><a href="#" class="hover:text-brand-400 transition">Terms and Conditions</a></li>
+            <li><a href="#" class="hover:text-brand-400 transition">Privacy Policy</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="text-white text-base font-bold uppercase tracking-wider mb-4">Quick Links</h4>
           <ul class="space-y-2 text-[15px]">
-            <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Courses</a></li>
-            <li><a href="#" class="hover:text-brand-400 transition">Scholarships</a></li>
-            <li><a href="{{ route('providers') }}" class="hover:text-brand-400 transition">Universities</a></li>
-            <li><a href="#" class="hover:text-brand-400 transition">Counsellors</a></li>
-            <li><a href="{{ route('events')}}" class="hover:text-brand-400 transition">Events</a></li>
+            <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Early Childhood Care</a></li>
+            <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Individual Support</a></li>
+            <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Community Service</a></li>
+            <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Construction & Trade</a></li>
+            <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Tourism, Travel and Hospitality</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="text-white text-base font-bold uppercase tracking-wider mb-4">Resources</h4>
+          <h4 class="text-white text-base font-bold uppercase tracking-wider mb-4">Get In Touch</h4>
           <ul class="space-y-2 text-[15px]">
-            <li><a href="#" class="hover:text-brand-400 transition">Australian Visa Guide</a></li>
-            <li><a href="#" class="hover:text-brand-400 transition">PR Pathway Courses</a></li>
-            <li><a href="#" class="hover:text-brand-400 transition">Cost of Living Calculator</a></li>
-            <li><a href="#" class="hover:text-brand-400 transition">Student Accommodation</a></li>
-            <li><a href="#" class="hover:text-brand-400 transition">Careers</a></li>
+            <li><a href="#" class="hover:text-brand-400 transition">Museum Tower, 603/267-277 Castlereagh St, Sydney NSW 2000, Australia</a></li>
+            <li><a href="#" class="hover:text-brand-400 transition">+61 405 106 199</a></li>
+            <li><a href="#" class="hover:text-brand-400 transition">info@openschooleducation.com</a></li>
 
           </ul>
+          <div class="flex space-x-3 mt-3">
+            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-facebook-f text-base"></i></a>
+            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-twitter text-base"></i></a>
+            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-instagram text-base"></i></a>
+            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-linkedin-in text-base"></i></a>
+          </div>
         </div>
       </div>
 
       <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-[15px] text-slate-500 gap-4">
-        <p class="text-center text-xs md:text-sm">© 2024 HBD Services. All rights reserved. Registered CRICOS Advisory Partner.</p>
+        <p class="text-center text-xs md:text-sm">© 2026 Open School Education. All rights reserved. Registered CRICOS Advisory Partner.</p>
         <div class="flex space-x-6 text-sm">
           <a href="{{ route('privacy-policy')}}" class="hover:text-slate-300">Privacy Policy</a>
           <a href="{{ route('terms-conditions')}}" class="hover:text-slate-300">Terms of Service</a>
           <a href="{{ route('contact')}}" class="hover:text-slate-300">Contact Us</a>
         </div>
+        
       </div>
     </div>
   </footer>

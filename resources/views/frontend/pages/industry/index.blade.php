@@ -1,96 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    @php
-        /*
-        |--------------------------------------------------------------------------
-        | Industry Information
-        |--------------------------------------------------------------------------
-        */
-        $industry = [
-            'name' => 'Automotive Retail, Service, and Repair Training – AUR',
-            'slug' => 'automotive-retail-service-and-repair',
-            'short_name' => 'Automotive',
-            'description' =>
-                'Explore our extensive programs that offer industry-recognized qualifications in automotive retail and repair. Choose your preferred training pathway to refine your skills and fast-track your qualification through Recognition of Prior Learning (RPL).',
-            'overview' =>
-                'The automotive retail, service and repair industry is a dynamic and essential sector that plays a crucial role in the maintenance and performance of vehicles. This industry encompasses a wide range of services, including vehicle sales, maintenance, repairs, and customization. It is driven by technological advancements, evolving consumer preferences, and the need for skilled professionals to ensure the safety and efficiency of vehicles on the road.',
-            'highlights' =>
-                'Staying ahead in the automotive industry necessitates up-to-date industrial qualifications. Open School Education aids its clients in choosing from a variety of Automotive Retail, Service, and Repair Trainings to provide the necessary skills and knowledge for various industry roles. Our courses offer comprehensive insights into the field. Through the Recognition of Prior Learning process, we value your existing skills and experience, enabling a faster achievement of your qualifications. Open School Education will find the best course specifically for your needs, offering an excellent learning opportunity. Join us to gain proficiency in vehicle installation, servicing, diagnostics, and repair, and unlock exciting career possibilities.',
-            'image' => 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1600&auto=format&fit=crop',
-        ];
 
-        /*
-        |--------------------------------------------------------------------------
-        | Course Data
-        |--------------------------------------------------------------------------
-        */
-        $courses = [
-            [
-                'code' => 'AUR30320',
-                'level' => 'Certificate III',
-                'name' => 'Certificate III in Automotive Electrical Technology',
-                'description' =>
-                    'This qualification reflects the role of individuals who perform a broad range of tasks on a variety of light vehicles in the automotive retail, service and repair industry.',
-                'providers' => 'Australis College / NOMI COLLEGE',
-                'rto_code' => '31518',
-                'duration' => 'Flexible Pathways',
-                'image' =>
-                    'https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?q=80&w=800&auto=format&fit=crop',
-            ],
-            [
-                'code' => 'AUR30620',
-                'level' => 'Certificate III',
-                'name' => 'Certificate III in Light Vehicle Mechanical Technology',
-                'description' =>
-                    'This qualification reflects the role of individuals who perform a broad range of tasks on light vehicles in the automotive retail, service, and repair sector.',
-                'providers' => 'Australis College / NOMI COLLEGE / AVM Skills Institute',
-                'rto_code' => '31518 & 46359',
-                'duration' => 'Flexible Pathways',
-                'image' =>
-                    'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop',
-            ],
-            [
-                'code' => 'AUR40226',
-                'level' => 'Certificate IV',
-                'name' => 'Certificate IV in Automotive Mechanical Diagnosis',
-                'description' =>
-                    'Covers advanced diagnostic skills and supervisory roles within mechanical servicing operations across various automotive domain specializations.',
-                'providers' => 'AVM Skills Institute',
-                'rto_code' => '46359',
-                'duration' => 'Flexible Pathways',
-                'image' =>
-                    'https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=800&auto=format&fit=crop',
-            ],
-            [
-                'code' => 'AUR50216',
-                'level' => 'Diploma',
-                'name' => 'Diploma of Automotive Technology',
-                'description' =>
-                    'Designed for senior automotive technicians and workshop managers seeking high-level diagnostic, leadership, and operational skills.',
-                'providers' => 'AVM Skills Institute',
-                'rto_code' => '46359',
-                'duration' => 'Flexible Pathways',
-                'image' =>
-                    'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop',
-            ],
-        ];
-
-        /*
-        |--------------------------------------------------------------------------
-        | Filter Levels
-        |--------------------------------------------------------------------------
-        */
-        $courseLevels = [
-            'All',
-            'Certificate II',
-            'Certificate III',
-            'Certificate IV',
-            'Diploma',
-            'Advance Diploma',
-            'Graduate Diploma',
-        ];
-    @endphp
 
 
     {{-- Hero Section --}}
@@ -423,8 +334,8 @@
                                     class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">
                                     <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> RPL Available
                                 </span>
-
-                                <a href="#"
+                                
+                                <a :href="'{{ route('courses.show', ['slug' => '__SLUG__']) }}'.replace('__SLUG__', course.slug)"
                                     class="inline-flex items-center gap-1.5 rounded-lg bg-brand-600 px-4 py-2 text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-700 hover:shadow">
                                     Read More
                                     <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

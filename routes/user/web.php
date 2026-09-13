@@ -12,6 +12,7 @@ use App\Http\Controllers\Frontend\ProviderController;
 use App\Http\Controllers\Frontend\EventController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Frontend\EventRegistrationController;
+use App\Http\Controllers\Frontend\IndustryController;
 use App\Http\Controllers\Frontend\ServicesController;
 use App\Http\Controllers\Student\ProfileController;
 use App\SEO\Controllers\SitemapController;
@@ -100,6 +101,11 @@ Route::post('/inquiry-us', [ContactController::class, 'store'])->name('contact.s
 
 // Route::post('/subscribe', [SubscriberController::class, 'store'])
 //     ->name('subscribe.store');
+
+Route::get('/industries/{slug}', [IndustryController::class, 'index'])
+    ->name('industries.index');
+Route::get('/courses/{slug}', [IndustryController::class, 'show'])
+    ->name('courses.show');
 
 //student routes
 Route::prefix('student')

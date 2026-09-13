@@ -23,31 +23,100 @@
 
                 </button>
                 <!-- Logo -->
-                <div class="w-28 p-1.5">
+                <div class=" p-1.5">
                     <a href="/">
-                        <img src="{{ asset('logo.webp') }}" alt="logo" class="w-auto h-auto">
+                        <img src="{{ asset('logo.png') }}" alt="logo" class="w-auto h-auto">
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-4 md:gap-6 lg:gap-8 text-sm font-medium uppercase">
                     {{-- Services --}}
-                    <a href="{{ route('services') }}"
+                    <a href="{{ route('about') }}"
                         class="relative font-medium transition-all duration-300
                             {{ request()->routeIs('services') ? 'text-brand-600 font-medium after:w-full' : 'text-neutral-600 hover:text-brand-600 after:w-0 hover:after:w-full' }}
                             after:absolute after:left-0 after:-bottom-1.5
                             after:h-0.5 after:bg-brand-600 after:transition-all after:duration-300">
-                        Services
+                        About Us
                     </a>
 
                     {{-- Courses --}}
-                    {{-- <a href="{{ route('courses') }}"
-                        class="relative font-medium transition-all duration-300
-                        {{ request()->routeIs('courses') ? 'text-brand-600 font-medium after:w-full' : 'text-neutral-600 hover:text-brand-600 after:w-0 hover:after:w-full' }}
-                        after:absolute after:left-0 after:-bottom-1.5
-                        after:h-0.5 after:bg-brand-600 after:transition-all after:duration-300">
-                        Courses
-                    </a> --}}
+                    <a href="#" id="dropdownHoverButton" data-dropdown-toggle="dropdownHover"
+                        data-dropdown-trigger="hover"
+                        class="flex items-center relative font-medium transition-all duration-300
+                            {{ request()->routeIs('') ? 'text-brand-600 font-medium after:w-full' : 'text-neutral-600 hover:text-brand-600 after:w-0 hover:after:w-full' }}
+                            after:absolute after:left-0 after:-bottom-1.5
+                            after:h-0.5 after:bg-brand-600 after:transition-all after:duration-300"
+                        type="button">
+                        Our Courses
+                        <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 9-7 7-7-7" />
+                        </svg>
+                    </a>
+
+                    @php
+                        $categories = [
+                            [
+                                'name' => 'Automotive Retail, Service and Repair',
+                                'url' => 'https://openschooleducation.com/automotive-retail-service-and-repair/',
+                            ],
+                            [
+                                'name' => 'Business Services',
+                                'url' => 'https://openschooleducation.com/business-services/',
+                            ],
+                            [
+                                'name' => 'Community Services',
+                                'url' => 'https://openschooleducation.com/community-services/',
+                            ],
+                            [
+                                'name' => 'Construction, Plumbing and Services',
+                                'url' => 'https://openschooleducation.com/construction-plumbing-and-services/',
+                            ],
+                            [
+                                'name' => 'Manufacturing',
+                                'url' => 'https://openschooleducation.com/manufacturing/',
+                            ],
+                            [
+                                'name' => 'Information and Communications Technology',
+                                'url' => 'https://openschooleducation.com/information-and-communications-technology/',
+                            ],
+                            [
+                                'name' => 'Resources and Infrastructure Industry',
+                                'url' => 'https://openschooleducation.com/resources-and-infrastructure-industry/',
+                            ],
+                            [
+                                'name' => 'Hairdressing and Beauty Services',
+                                'url' => 'https://openschooleducation.com/hairdressing-and-beauty-services/',
+                            ],
+                            [
+                                'name' => 'Tourism, Travel and Hospitality',
+                                'url' => 'https://openschooleducation.com/tourism-travel-and-hospitality/',
+                            ],
+                        ];
+                    @endphp
+
+                    <!-- Dropdown menu -->
+                    <div id="dropdownHover" class="z-10 hidden top-full left-0 w-210 rounded-md bg-white shadow-lg">
+
+                        <ul class="grid grid-cols-2 gap-2  px-3 py-5 text-sm font-medium normal-case"
+                            aria-labelledby="dropdownHoverButton">
+
+                            @foreach ($categories as $category)
+                                <li>
+                                    <a href="{{ $category['url'] }}"
+                                        class="block w-full rounded-md p-2 normal-case text-gray-700
+                           transition-colors hover:bg-gray-100 hover:text-brand-600">
+
+                                        {{ $category['name'] }}
+
+                                    </a>
+                                </li>
+                            @endforeach
+
+                        </ul>
+                    </div>
 
                     {{-- Counsellors --}}
                     <a href="{{ route('counsellors') }}"
@@ -55,7 +124,7 @@
                         {{ request()->routeIs('counsellors') ? 'text-brand-600 font-medium after:w-full' : 'text-neutral-600 hover:text-brand-600 after:w-0 hover:after:w-full' }}
                         after:absolute after:left-0 after:-bottom-1.5
                         after:h-0.5 after:bg-brand-600 after:transition-all after:duration-300">
-                        Counsellors
+                        How It Works
                     </a>
                     {{-- Events --}}
                     <a href="{{ route('events') }}"
@@ -63,7 +132,7 @@
                         {{ request()->routeIs('events') ? 'text-brand-600 font-medium after:w-full' : 'text-neutral-600 hover:text-brand-600 after:w-0 hover:after:w-full' }}
                         after:absolute after:left-0 after:-bottom-1.5
                         after:h-0.5 after:bg-brand-600 after:transition-all after:duration-300">
-                        Events
+                        Our Partners
                     </a>
 
                     {{-- Destinations --}}
@@ -72,9 +141,9 @@
                             {{ request()->routeIs('destinations') ? 'text-brand-600 font-medium after:w-full' : 'text-neutral-600 hover:text-brand-600 after:w-0 hover:after:w-full' }}
                             after:absolute after:left-0 after:-bottom-1.5
                             after:h-0.5 after:bg-brand-600 after:transition-all after:duration-300">
-                        Destinations
+                        Contact Us
                     </a>
-                    
+
 
                 </div>
 
@@ -82,26 +151,8 @@
                     <!-- Right Side -->
                     <a href="{{ route('register') }}"
                         class="hidden md:flex text-sm uppercase bg-brand-600 text-white px-4 py-2 lg:px-6 lg:py-2.5 rounded-lg font-medium hover:bg-brand-600 transition">
-                        Sign Up Free
+                        Check Your Eligibility
                     </a>
-
-                    @auth
-                        <a href="{{ auth()->user()->rolePrefix() === 'student'
-                            ? route('student.dashboard')
-                            : route('role.dashboard', ['role' => auth()->user()->rolePrefix()]) }}"
-                            class="overflow-hidden rounded-full h-11 w-11 block">
-
-                            <img src="{{ asset('images/user/owner.png') }}" alt="User"
-                                class="w-full h-full object-cover" />
-                        </a>
-                    @endauth
-
-                    @guest
-                        <a href="{{ route('login') }}"
-                            class="text-sm font-medium uppercase text-neutral-600 hover:text-brand-600">
-                            login
-                        </a>
-                    @endguest
                 </div>
             </div>
 
@@ -111,20 +162,29 @@
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-200 shadow-lg">
 
             <div class="flex flex-col px-6 py-5 space-y-3 text-base font-medium">
-                <a href="{{ route('services') }}" class="{{ request()->routeIs('services') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Services</a>
-                {{-- <a href="{{ route('courses') }}" class="{{ request()->routeIs('courses') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Courses</a> --}}
-                <a href="{{ route('counsellors') }}" class="{{ request()->routeIs('counsellors') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Counsellors</a>
-                <a href="{{ route('events') }}" class="{{ request()->routeIs('events') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Events</a>
-                <a href="{{ route('destinations') }}" class="{{ request()->routeIs('destinations') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Destinations</a>
-               
+                <a href="{{ route('services') }}"
+                    class="{{ request()->routeIs('services') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">About
+                    Us</a>
+                <a href="{{ route('courses') }}"
+                    class="{{ request()->routeIs('courses') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Courses</a>
+                <a href="{{ route('counsellors') }}"
+                    class="{{ request()->routeIs('counsellors') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">How
+                    It Works</a>
+                <a href="{{ route('events') }}"
+                    class="{{ request()->routeIs('events') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Our
+                    Partners</a>
+                <a href="{{ route('destinations') }}"
+                    class="{{ request()->routeIs('destinations') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Contact
+                    Us</a>
+
 
                 <div class="flex items-center justify-between mt-6">
-                    @guest
-                        <a href="{{ route('register') }}"
-                            class="text-sm uppercase bg-brand-600 text-white px-4 py-2 lg:px-6 lg:py-2.5 rounded-lg font-medium hover:bg-brand-600 transition">
-                            Sign Up Free
-                        </a>
-                    @endguest
+
+                    <a href="{{ route('register') }}"
+                        class="text-sm uppercase bg-brand-600 text-white px-4 py-2 lg:px-6 lg:py-2.5 rounded-lg font-medium hover:bg-brand-600 transition">
+                        Check Your Eligibility
+                    </a>
+
                 </div>
             </div>
         </div>
