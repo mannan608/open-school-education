@@ -335,7 +335,7 @@
                                     <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> RPL Available
                                 </span>
                                 
-                                <a :href="'{{ route('courses.show', ['slug' => '__SLUG__']) }}'.replace('__SLUG__', course.slug)"
+                                <a :href="'{{ route('course.show', ['slug' => '__SLUG__']) }}'.replace('__SLUG__', course.slug)"
                                     class="inline-flex items-center gap-1.5 rounded-lg bg-brand-600 px-4 py-2 text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-700 hover:shadow">
                                     Read More
                                     <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

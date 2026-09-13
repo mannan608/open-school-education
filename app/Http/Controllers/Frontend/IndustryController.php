@@ -41,6 +41,8 @@ class IndustryController extends Controller
             'Graduate Diploma',
         ];
 
+        // return $categoryCourses;
+
         return view('frontend.pages.industry.index', [
             'industry' => $industry,
             'courses' => $categoryCourses,
@@ -72,7 +74,9 @@ class IndustryController extends Controller
 
         abort_if(!$category, 404);
 
-        return view('frontend.pages.courses.show', [
+return $course;
+
+        return view('frontend.pages.industry.show', [
             'course' => $course,
             'category' => $category,
         ]);

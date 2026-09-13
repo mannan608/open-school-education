@@ -105,7 +105,7 @@ Route::post('/inquiry-us', [ContactController::class, 'store'])->name('contact.s
 Route::get('/industries/{slug}', [IndustryController::class, 'index'])
     ->name('industries.index');
 Route::get('/courses/{slug}', [IndustryController::class, 'show'])
-    ->name('courses.show');
+    ->name('course.show');
 
 //student routes
 Route::prefix('student')
