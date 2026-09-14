@@ -143,7 +143,7 @@
                             <div class="mt-5 space-y-3">
                                 @foreach ($course['providers'] as $provider)
                                     <div class="flex items-center justify-between gap-4">
-                                        <p class="text-sm font-bold text-slate-900">
+                                        <p class="text-sm font-bold text-slate-900 line-clamp-1 w-[70%]">
                                             {{ $provider['name'] }}
                                         </p>
 

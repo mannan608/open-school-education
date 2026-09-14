@@ -105,7 +105,7 @@
                     </h2>
 
                     {{-- Subtitle / Intro --}}
-                    <p class="mt-5 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-lg">
+                    <p class="mt-5 max-w-2xl text-sm font-medium leading-relaxed text-slate-600 sm:text-base">
                         Discover the skills, knowledge, and professional capabilities recognised across the
                         <span class="font-bold text-slate-900   ">
                             {{ $industry['name'] }}
@@ -114,7 +114,7 @@
                     </p>
 
                     {{-- Overview Content Block --}}
-                    <div class="relative mt-8 ">
+                    <div class="relative mt-4 ">
                         <p class="text-sm leading-8 text-slate-600 sm:text-base sm:leading-8">
                             {{ $industry['overview'] }}
                         </p>
