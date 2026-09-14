@@ -1,5 +1,7 @@
 @extends('frontend.layouts.app')
 
+@section('title', $industry['name'])
+
 @section('content')
     {{-- Hero Section --}}
     <section class="relative isolate overflow-hidden bg-brand-950 text-white">
@@ -245,7 +247,7 @@
 
                     <p class="mt-4 text-sm leading-7 text-slate-600">
                         Explore qualifications available within the
-                       <span class="font-bold text-black"> {{ $industry['name'] }}</span>
+                        <span class="font-bold text-black"> {{ $industry['name'] }}</span>
                         industry and find the pathway that best matches your skills and experience.
                     </p>
 
@@ -284,7 +286,7 @@
             {{-- Cards Grid --}}
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
 
-                <template x-for="course in filteredCourses" :key="course.code">
+                <template x-for="course in filteredCourses" :key="course.slug">
                     <article
                         class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
 
@@ -293,7 +295,8 @@
                             <img :src="course.image" :alt="course.name"
                                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
 
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-transparent">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-transparent">
                             </div>
 
                             <span
@@ -310,8 +313,11 @@
                         {{-- Card Body --}}
                         <div class="flex flex-1 flex-col justify-between p-6">
                             <div>
-                                <h3 class="text-base md:text-lg font-bold leading-snug text-slate-900 group-hover:text-brand-600 transition-colors"
-                                    x-text="course.name"></h3>
+                                <h3
+                                    class="text-base md:text-lg font-bold leading-snug text-slate-900 group-hover:text-brand-600 transition-colors">
+                                    <span x-text="course.level"></span>
+                                    <span x-text="course.name"></span>
+                                </h3>
 
                                 <!-- FIXED: Changed course.description to course.short_description -->
                                 <p class="mt-3 text-sm leading-relaxed text-slate-600 line-clamp-3"
@@ -330,25 +336,21 @@
                                                 class="font-semibold text-slate-700 uppercase">Providers : </strong> <span
                                                 x-text="course.providers.map(p => p.name).join(', ')"></span></span>
                                     </div>
-                                    <div class="flex items-center gap-2">
-                                        <svg class="h-4 w-4 shrink-0 text-emerald-500" fill="none"
-                                            stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                        <!-- FIXED: Mapped rto_codes from the providers array -->
-                                        <span><strong class="font-semibold text-slate-700 uppercase">RTO CODE :</strong>
-                                            <span x-text="course.providers.map(p => p.rto_code).join(', ')"></span></span>
-                                    </div>
                                 </div>
                             </div>
 
                             {{-- Card Footer CTA --}}
                             <div class="mt-6 flex items-center justify-between border-t border-slate-100 pt-4">
-                                <span
-                                    class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> RPL Available
-                                </span>
+                                <div class="flex items-center gap-2">
+                                    <svg class="h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <!-- FIXED: Mapped rto_codes from the providers array -->
+                                    <span class="text-sm"><strong class="font-semibold text-slate-700 uppercase">RTO CODE :</strong>
+                                        <span x-text="course.providers.map(p => p.rto_code).join(' & ')"></span></span>
+                                </div>
 
                                 <a :href="'{{ route('course.show', ['slug' => '__SLUG__']) }}'.replace('__SLUG__', course.slug)"
                                     class="inline-flex items-center gap-1.5 rounded-lg bg-brand-600 px-4 py-2 text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-700 hover:shadow">

@@ -1,5 +1,7 @@
 @extends('frontend.layouts.app')
 
+@section('title', $course['name'])
+
 @section('content')
     {{-- =========================================================
     HERO SECTION
@@ -46,7 +48,7 @@
 
                     {{-- Description --}}
                     <p class="mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
-                        {{ $course['short_description'] }}
+                        {{ $course['hero_description'] }}
                     </p>
 
 
@@ -62,7 +64,7 @@
 
                         </a>
 
-                        <a href="{{$course['course_url']}}"
+                        <a href="{{ $course['course_url'] }}"
                             class="inline-flex items-center justify-center gap-2 rounded-xl border border-secondary-200 bg-white px-6 py-3.5 text-sm font-bold text-secondary-700 transition hover:border-secondary-300 hover:bg-secondary-50">
 
                             <iconify-icon icon="lucide:circle-help" class="text-lg"></iconify-icon>
@@ -357,13 +359,14 @@
 
                 <p class="mt-4 text-sm leading-7 text-brand-100 sm:text-base">
                     Did you know that
-                    <strong class="font-black text-secondary-400">88.1%</strong>
-                    of Certificate III in Automotive Electrical Technology graduates
+                    <strong class="font-black text-secondary-400">
+                        {{ $course['graduate_outcomes']['overall_outcome']['percentage'] }}</strong>
+                    of {{ $course['level'] }} {{ $course['name'] }} graduates
                     secured a new job, earned a promotion, or received higher pay after obtaining their qualification?
                 </p>
 
                 <p class="mt-2 text-xs text-brand-300">
-                    Verified Australian Vocational Education and Training (NCVER) industry graduate outcome benchmarks.
+                    {{ $course['graduate_outcomes']['source_note'] }}
                 </p>
 
             </div>
@@ -372,98 +375,39 @@
             {{-- Stats --}}
             <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
-                {{-- Stat 1 --}}
-                <div
-                    class="rounded-2xl border border-brand-800 bg-brand-900 p-6 text-center transition hover:-translate-y-1 hover:border-brand-700">
-
-                    <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-800 text-brand-200">
-                        <iconify-icon icon="lucide:briefcase-business" class="text-xl"></iconify-icon>
-                    </div>
-
-                    <p class="mt-5 text-[10px] font-black uppercase tracking-wider text-brand-300">
-                        Top Occupation Outcome
-                    </p>
-
-                    <p class="mt-2 text-4xl font-black text-white">
-                        41.3%
-                    </p>
-
-                    <p class="mt-2 text-sm leading-6 text-brand-200">
-                        Community, Mining & Automotive Technicians
-                    </p>
-
-                </div>
-
-
-                {{-- Stat 2 --}}
-                <div
-                    class="rounded-2xl border border-brand-800 bg-brand-900 p-6 text-center transition hover:-translate-y-1 hover:border-brand-700">
-
+                @foreach ($course['graduate_outcomes']['statistics'] as $index => $stat)
                     <div
-                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-500/15 text-secondary-400">
-                        <iconify-icon icon="lucide:building-2" class="text-xl"></iconify-icon>
+                        class="rounded-2xl border border-brand-800 bg-brand-900 p-6 text-center transition hover:-translate-y-1 hover:border-brand-700">
+
+                        {{-- Icon --}}
+                        <div
+                            class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl
+                {{ $index % 2 === 0 ? 'bg-brand-800 text-brand-200' : 'bg-secondary-500/15 text-secondary-400' }}">
+
+                            <iconify-icon icon="{{ $stat['icon'] }}" class="text-xl">
+                            </iconify-icon>
+
+                        </div>
+
+                        {{-- Label --}}
+                        <p class="mt-5 text-[10px] font-black uppercase tracking-wider text-brand-300">
+                            {{ $stat['label'] }}
+                        </p>
+
+                        {{-- Value --}}
+                        <p
+                            class="mt-2 text-4xl font-black
+                {{ $index % 2 === 0 ? 'text-white' : 'text-secondary-400' }}">
+                            {{ $stat['value'] }}
+                        </p>
+
+                        {{-- Description --}}
+                        <p class="mt-2 text-sm leading-6 text-brand-200">
+                            {{ $stat['description'] }}
+                        </p>
+
                     </div>
-
-                    <p class="mt-5 text-[10px] font-black uppercase tracking-wider text-brand-300">
-                        Automotive & Heavy Industry
-                    </p>
-
-                    <p class="mt-2 text-4xl font-black text-secondary-400">
-                        86%
-                    </p>
-
-                    <p class="mt-2 text-sm leading-6 text-brand-200">
-                        Fleet Repair, Dealerships & Field Service
-                    </p>
-
-                </div>
-
-
-                {{-- Stat 3 --}}
-                <div
-                    class="rounded-2xl border border-brand-800 bg-brand-900 p-6 text-center transition hover:-translate-y-1 hover:border-brand-700">
-
-                    <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-800 text-brand-200">
-                        <iconify-icon icon="lucide:graduation-cap" class="text-xl"></iconify-icon>
-                    </div>
-
-                    <p class="mt-5 text-[10px] font-black uppercase tracking-wider text-brand-300">
-                        Training & Technical Roles
-                    </p>
-
-                    <p class="mt-2 text-4xl font-black text-white">
-                        8%
-                    </p>
-
-                    <p class="mt-2 text-sm leading-6 text-brand-200">
-                        Supervisory, Mentorship & Training
-                    </p>
-
-                </div>
-
-
-                {{-- Stat 4 --}}
-                <div
-                    class="rounded-2xl border border-brand-800 bg-brand-900 p-6 text-center transition hover:-translate-y-1 hover:border-brand-700">
-
-                    <div
-                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-500/15 text-secondary-400">
-                        <iconify-icon icon="lucide:package-search" class="text-xl"></iconify-icon>
-                    </div>
-
-                    <p class="mt-5 text-[10px] font-black uppercase tracking-wider text-brand-300">
-                        Retail & Aftermarket Parts
-                    </p>
-
-                    <p class="mt-2 text-4xl font-black text-secondary-400">
-                        3%
-                    </p>
-
-                    <p class="mt-2 text-sm leading-6 text-brand-200">
-                        Automotive Parts & Supply Consultancies
-                    </p>
-
-                </div>
+                @endforeach
 
             </div>
 
@@ -580,7 +524,7 @@
                 </h2>
 
                 <p class="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
-                    {{ $course['career_pathways']['description'] }}
+                    Gaining a <strong>{{$course['level']}} in {{$course['name']}}</strong> can also be a stepping stone to more specialized roles and can open up opportunities for professional development and career pathways.
                 </p>
 
             </div>

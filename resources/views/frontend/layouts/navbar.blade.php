@@ -1,3 +1,10 @@
+    @php
+    $categories = json_decode(
+        file_get_contents(resource_path('data/categories.json')),
+        true
+    );
+    // @dd($categories);
+@endphp
     <header class="fixed top-0 left-0 w-full z-50 border-0 md:border-b bg-white backdrop-blur-md dark:bg-neutral-900/95">
 
         <nav class="max-w-7xl mx-auto px-5 lg:px-8">
@@ -56,7 +63,7 @@
                         </svg>
                     </a>
 
-                    @php
+                    {{-- @php
                         $categories = [
                             [
                                 'name' => 'Automotive Retail, Service and Repair',
@@ -95,17 +102,17 @@
                                 'url' => 'https://openschooleducation.com/tourism-travel-and-hospitality/',
                             ],
                         ];
-                    @endphp
+                    @endphp --}}
 
                     <!-- Dropdown menu -->
                     <div id="dropdownHover" class="z-10 hidden top-full left-0 w-210 rounded-md bg-white shadow-lg">
 
-                        <ul class="grid grid-cols-2 gap-2  px-3 py-5 text-sm font-medium normal-case"
+                        <ul class="grid grid-cols-2   px-3 py-5 text-sm font-medium normal-case"
                             aria-labelledby="dropdownHoverButton">
 
                             @foreach ($categories as $category)
-                                <li>
-                                    <a href="{{ $category['url'] }}"
+                                <li class="max-w-[90%]">
+                                    <a href="{{ route('industries.index', $category['slug']) }}"
                                         class="block w-full rounded-md p-2 normal-case text-gray-700
                            transition-colors hover:bg-gray-100 hover:text-brand-600">
 

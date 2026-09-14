@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}">
     {{-- <title>{{ $title }}</title> --}}
-    <x-frontend.seo-meta />
+    <x-frontend.seo-meta :page-title="trim($__env->yieldContent('title'))" />
     <link rel="stylesheet" href="{{ asset('css/front-end-custom.css') }}">
      @vite(['resources/css/app.css', 'resources/js/app.js'])
 
