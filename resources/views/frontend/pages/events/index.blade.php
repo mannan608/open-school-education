@@ -87,7 +87,7 @@
                         <span class="text-sm font-medium text-neutral-400">Sort:</span>
                         <select
                             class="rounded-lg border-none bg-neutral-50 py-1.5 pl-2 pr-7 text-sm font-semibold text-neutral-800 focus:ring-0 cursor-pointer">
-                            <option value="relevance">HBD Services</option>
+                            <option value="relevance">Open School Education</option>
                             <option value="duration">Providers</option>
                         </select>
                     </div>

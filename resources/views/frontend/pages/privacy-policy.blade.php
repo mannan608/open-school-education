@@ -19,7 +19,7 @@
             </h1>
 
             <p class="mx-auto mt-5 max-w-2xl text-sm text-neutral-500 sm:text-base">
-                This document outlines how HBD Services collects, uses, and safeguards
+                This document outlines how Open School Education collects, uses, and safeguards
                 your personal data when utilizing our educational consultancy and
                 recruitment services.
             </p>
@@ -37,7 +37,7 @@
 
                 <span class="hidden h-1 w-1 rounded-full bg-neutral-300 sm:block"></span>
 
-                <span>HBD Services</span>
+                <span>Open School Education</span>
             </div>
 
         </header>
@@ -64,7 +64,7 @@
                             </h2>
 
                             <p class="mt-1 text-sm leading-5 text-neutral-500">
-                                Official information about HBD Services.
+                                Official information about Open School Education.
                             </p>
 
                         </div>
@@ -79,7 +79,7 @@
                                 </span>
 
                                 <span class="text-sm font-semibold text-neutral-800">
-                                    HBD Services
+                                    Open School Education
                                 </span>
                             </div>
 
@@ -115,12 +115,12 @@
                                 </span>
 
                                 <a
-                                    href="https://www.hbdservices.com"
+                                    href="https://openschooleducation.com/"
                                     target="_blank"
                                     rel="noopener"
                                     class="group inline-flex max-w-full items-center gap-1.5 break-all text-sm font-medium text-brand-600 transition-colors hover:text-brand-800"
                                 >
-                                    <span>www.hbdservices.com</span>
+                                    <span>openschooleducation.com</span>
 
                                     <svg class="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                          fill="none"
@@ -142,7 +142,7 @@
                         <div class="border-t border-neutral-100 bg-neutral-25 p-5">
 
                             <a
-                                href="mailto:info@hbdservices.com"
+                                href="mailto:info@openschooleducation.com"
                                 class="group flex w-full items-center justify-center gap-2 rounded-xl bg-brand-500 px-4 py-3 text-sm font-semibold text-white shadow-sm shadow-brand-500/20 transition-all duration-200 hover:bg-brand-600 hover:shadow-md hover:shadow-brand-500/20 active:scale-[0.99]"
                             >
                                 <svg class="h-4 w-4"
@@ -223,7 +223,7 @@
                         <div class="ml-12 space-y-4 text-[15px] leading-7 text-neutral-600">
 
                             <p>
-                                HBD Services (“HBD”, “we”, “us”, or “our”) respects your privacy and is committed to protecting your personal information in accordance with the
+                                Open School Education (“we”, “us”, or “our”) respects your privacy and is committed to protecting your personal information in accordance with the
                                 <strong class="font-semibold text-neutral-800">Privacy Act 1988 (Cth)</strong>
                                 and the
                                 <strong class="font-semibold text-neutral-800">Australian Privacy Principles (APPs)</strong>.
@@ -254,14 +254,14 @@
                             <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-brand-200 bg-brand-50 font-mono text-[11px] font-bold text-brand-600">02</span>
 
                             <h2 class="pt-1 text-xl font-bold tracking-tight text-neutral-950">
-                                About HBD Services
+                                About Open School Education
                             </h2>
                         </div>
 
                         <div class="ml-12 space-y-4 text-[15px] leading-7 text-neutral-600">
 
                             <p>
-                                HBD Services is an Australian-registered educational consultancy specialising in international student recruitment, admission guidance, and visa assistance for students seeking to study in Australia or Canada.
+                                Open School Education is an Australian-registered educational consultancy specialising in international student recruitment, admission guidance, and visa assistance for students seeking to study in Australia or Canada.
                             </p>
 
                             <p>
@@ -800,9 +800,9 @@
 
                             <p>
                                 You can unsubscribe at any time by clicking the “unsubscribe” link in our emails or contacting us directly at
-                                <a href="mailto:info@hbdservices.com"
+                                <a href="mailto:info@openschooleducation.com"
                                    class="font-semibold text-brand-600 hover:text-brand-800 hover:underline">
-                                    info@hbdservices.com
+                                    info@openschooleducation.com
                                 </a>.
                             </p>
 
@@ -834,9 +834,9 @@
 
                             <p>
                                 You can request access to, or correction of, your personal information at any time by emailing
-                                <a href="mailto:info@hbdservices.com"
+                                <a href="mailto:info@openschooleducation.com"
                                    class="font-semibold text-brand-600 hover:text-brand-800 hover:underline">
-                                    info@hbdservices.com
+                                    info@openschooleducation.com
                                 </a>.
                             </p>
 
@@ -866,7 +866,7 @@
                         <div class="ml-12 text-[15px] leading-7 text-neutral-600">
 
                             <p>
-                                Our website may contain links to external or co-branded websites. HBD is not responsible for the content or privacy practices of these sites. We encourage you to review their privacy policies before providing any personal information.
+                                Our website may contain links to external or co-branded websites. Open School Education is not responsible for the content or privacy practices of these sites. We encourage you to review their privacy policies before providing any personal information.
                             </p>
 
                         </div>
@@ -891,7 +891,7 @@
                         <div class="ml-12 space-y-4 text-[15px] leading-7 text-neutral-600">
 
                             <p>
-                                HBD complies fully with
+                                Open School Education complies fully with
                                 <strong class="font-semibold text-neutral-800">Google’s Advertising Policies</strong>
                                 and
                                 <strong class="font-semibold text-neutral-800">Meta’s Data Terms</strong>,
@@ -1000,7 +1000,7 @@
                                         <div>
 
                                             <h3 class="text-lg font-bold tracking-tight text-neutral-950">
-                                                HBD Services
+                                                Open School Education
                                             </h3>
 
                                             <p class="mt-2 text-sm leading-6 text-neutral-600">
@@ -1014,10 +1014,10 @@
                                                 </strong>
 
                                                 <a
-                                                    href="mailto:info@hbdservices.com"
+                                                    href="mailto:info@openschooleducation.com"
                                                     class="ml-1 font-semibold text-brand-600 transition-colors hover:text-brand-800 hover:underline"
                                                 >
-                                                    info@hbdservices.com
+                                                    info@openschooleducation.com
                                                 </a>
 
                                             </p>

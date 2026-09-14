@@ -198,7 +198,7 @@
                 <h3 class="text-lg font-bold text-neutral-900 mb-2">Airport Pickup</h3>
                 <p class="text-sm text-neutral-600 leading-relaxed">
                     Students can book airport pickup service from Australia borders or regional areas back to Adelaide's
-                    buildings via booking made on the HBD Services account to join regular weekly arrival points at the
+                    buildings via booking made on the Open School Education account to join regular weekly arrival points at the
                     Accommodation Center.
                 </p>
             </div>

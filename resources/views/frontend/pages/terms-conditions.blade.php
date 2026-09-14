@@ -31,7 +31,7 @@
             {{-- Description --}}
             <p class="mx-auto mt-5 max-w-2xl text-sm text-neutral-500 sm:text-base">
 
-                Please review these Terms carefully before utilizing the services and operations offered by HBD
+                Please review these Terms carefully before utilizing the services and operations offered by Open School Education
                 Services.
 
             </p>
@@ -55,7 +55,7 @@
 
                 <span class="hidden h-1 w-1 rounded-full bg-neutral-300 sm:block"></span>
 
-                <span>HBD Services</span>
+                <span>Open School Education</span>
 
             </div>
 
@@ -128,7 +128,7 @@
                                 </span>
 
                                 <span class="text-sm font-semibold text-neutral-900">
-                                    HBD Services
+                                    Open School Education
                                 </span>
 
                             </div>
@@ -158,10 +158,10 @@
                                     Website
                                 </span>
 
-                                <a href="https://hbdservices.com" target="_blank" rel="noopener noreferrer"
+                                <a href="https://openschooleducation.com/" target="_blank" rel="noopener noreferrer"
                                     class="group inline-flex max-w-full items-center gap-1.5 break-all text-sm font-medium text-brand-600 transition-colors hover:text-brand-800">
 
-                                    https://hbdservices.com
+                                   https://openschooleducation.com/
 
                                     <svg class="h-3.5 w-3.5 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -183,7 +183,7 @@
                                 Key Contact
                             </span>
 
-                            <a href="mailto:info@hbdservices.com"
+                            <a href="mailto:info@openschooleducation.com"
                                 class="group flex w-full items-center justify-center gap-2 rounded-xl bg-brand-500 px-4 py-3 text-xs font-semibold text-white shadow-sm shadow-brand-500/20 transition-all duration-200 hover:bg-brand-600 hover:shadow-md hover:shadow-brand-500/20 active:scale-[0.99]">
 
                                 <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -191,7 +191,7 @@
                                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
 
-                                info@hbdservices.com
+                                info@openschooleducation.com
 
                             </a>
 
@@ -222,7 +222,7 @@
                                 </h3>
 
                                 <p class="mt-1 text-xs leading-5 text-neutral-500">
-                                    These terms govern your use of the HBD Services website and associated services.
+                                    These terms govern your use of the Open School Education website and associated services.
                                 </p>
 
                             </div>
@@ -288,7 +288,7 @@
                                     </span>
 
                                     <span class="text-sm font-semibold text-neutral-800">
-                                        https://hbdservices.com
+                                        https://openschooleducation.com/
                                     </span>
 
                                 </div>
@@ -319,7 +319,7 @@
                                     </span>
 
                                     <span class="text-sm font-medium text-neutral-800">
-                                        HBD Services (ABN 65 967 066 288)
+                                        Open School Education (ABN 65 967 066 288)
                                     </span>
 
                                 </div>
@@ -371,8 +371,8 @@
 
                                 <p>
                                     <strong class="font-semibold text-neutral-900">1.2.</strong>
-                                    The Website is operated by HBD Services (ABN 65 967 066 288). Access to and use of
-                                    the Website, or any of its associated Services, is provided by HBD. Please read
+                                    The Website is operated by Open School Education (ABN 65 967 066 288). Access to and use of
+                                    the Website, or any of its associated Services, is provided by Open School Education. Please read
                                     these terms and conditions (the ‘<strong
                                         class="font-semibold text-neutral-900">Terms</strong>‘) carefully. By using,
                                     browsing and/or reading the Website, this signifies that you have read, understood
@@ -386,8 +386,8 @@
 
                                 <p>
                                     <strong class="font-semibold text-neutral-900">1.3.</strong>
-                                    HBD reserves the right to review and change any of the Terms by updating this page
-                                    at its sole discretion. When HBD updates the Terms, it will use reasonable
+                                    Open School Education reserves the right to review and change any of the Terms by updating this page
+                                    at its sole discretion. When Open School Education updates the Terms, it will use reasonable
                                     endeavours to provide you with notice of updates of the Terms. Any changes to the
                                     Terms take immediate effect from the date of their publication. Before you continue,
                                     we recommend you keep a copy of the Terms for your records.
@@ -434,7 +434,7 @@
                             <p class="text-[15px] leading-7 text-neutral-600">
                                 You accept the Terms by registering for the Services as required under the Terms for use
                                 of the Services. You may also accept the Terms by clicking to accept or agree to the
-                                Terms where and if this option is made available to you by HBD in the user interface.
+                                Terms where and if this option is made available to you by Open School Education in the user interface.
                             </p>
 
                         </div>
@@ -505,7 +505,7 @@
                                 </strong>
 
                                 The website does not have a payment mechanism. All payments for Services are made
-                                separately to HBD Business Account via EFT or other means as agreed between You and HBD
+                                separately to Open School Education Business Account via EFT or other means as agreed between You and Open School Education
                                 outside the website.
 
                             </div>
@@ -513,7 +513,7 @@
 
                             <p>
                                 <strong class="font-semibold text-neutral-900">3.3.</strong>
-                                You warrant that any information you give to HBD will always be accurate, correct and up
+                                You warrant that any information you give to Open School Education will always be accurate, correct and up
                                 to date.
                             </p>
 
@@ -529,7 +529,7 @@
 
                                     <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500"></span>
 
-                                    you are not of legal age to form a binding contract with HBD; or
+                                    you are not of legal age to form a binding contract with Open School Education; or
 
                                 </li>
 
@@ -615,7 +615,7 @@
                                 </li>
 
 
-                                @foreach (['you must not expressly or impliedly impersonate another member at any time;', 'you will not use the Services or the Website in connection with any commercial endeavours except those that are specifically endorsed or approved by the management of HBD;', 'you will not use the Services or Website for any illegal and/or unauthorised use which includes collecting email addresses of Members by electronic or other means for the purpose of sending unsolicited email or unauthorised framing of or linking to the Website;', 'you agree that appropriate legal action will be taken by HBD for any illegal or unauthorised use of the Website; and', 'you acknowledge and agree that any automated use of the Website or its Services is prohibited.'] as $item)
+                                @foreach (['you must not expressly or impliedly impersonate another member at any time;', 'you will not use the Services or the Website in connection with any commercial endeavours except those that are specifically endorsed or approved by the management of Open School Education;', 'you will not use the Services or Website for any illegal and/or unauthorised use which includes collecting email addresses of Members by electronic or other means for the purpose of sending unsolicited email or unauthorised framing of or linking to the Website;', 'you agree that appropriate legal action will be taken by Open School Education for any illegal or unauthorised use of the Website; and', 'you acknowledge and agree that any automated use of the Website or its Services is prohibited.'] as $item)
                                     <li class="flex gap-3">
 
                                         <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500"></span>
@@ -666,19 +666,19 @@
 
                             <p>
                                 <strong class="font-semibold text-neutral-900">5.1.</strong>
-                                The Website, and the Services of HBD are subject to copyright. The material on the
+                                The Website, and the Services of Open School Education are subject to copyright. The material on the
                                 Website is protected by copyright under the laws of Australia and through international
                                 treaties. Unless otherwise indicated, all rights (including copyright) in the Services
                                 and compilation of the Website (including but not limited to text, graphics, logos,
                                 button icons, video images, audio clips, Website, code, scripts, design elements and
                                 interactive features) or the Services are owned or controlled for these purposes and are
-                                reserved by HBD.
+                                reserved by Open School Education.
                             </p>
 
                             <p>
                                 <strong class="font-semibold text-neutral-900">5.2.</strong>
                                 All trademarks, service marks and trade names are owned, registered and/or licensed by
-                                HBD. Whilst you are using the Services:
+                                Open School Education. Whilst you are using the Services:
                             </p>
 
                             <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-5 text-sm">
@@ -698,8 +698,8 @@
 
                             <p>
                                 <strong class="font-semibold text-neutral-900">5.3.</strong>
-                                HBD does not grant you any other rights whatsoever in relation to the Website or the
-                                Services. All other rights are expressly reserved by HBD.
+                                Open School Education does not grant you any other rights whatsoever in relation to the Website or the
+                                Services. All other rights are expressly reserved by Open School Education.
                             </p>
 
                             <p>
@@ -722,7 +722,7 @@
 
                             <p>
                                 <strong class="font-semibold text-neutral-900">5.5.</strong>
-                                You may not, without the prior written permission of HBD broadcast, republish, up-load
+                                You may not, without the prior written permission of Open School Education broadcast, republish, up-load
                                 to a third party, transmit, post, distribute, show or play in public, adapt or change in
                                 any way the Services for any purpose, unless otherwise provided by these Terms. This
                                 prohibition does not extend to materials on the Website, which are freely available for
@@ -767,7 +767,7 @@
                         <div class="mt-6 ml-0 sm:ml-12">
 
                             <p class="text-[15px] leading-7 text-neutral-600">
-                                HBD will try to make this website available but cannot guarantee that this website will
+                                Open School Education will try to make this website available but cannot guarantee that this website will
                                 operate continuously or without interruptions or is error free and can accept no
                                 liability for its unavailability. The Client must not attempt to interfere with the
                                 proper working of this website and, in particular, must not attempt to circumvent
@@ -814,7 +814,7 @@
 
                             <p>
                                 <strong class="font-semibold text-neutral-900">7.1.</strong>
-                                HBD will do its best to ensure that all materials and information published on this
+                                Open School Education will do its best to ensure that all materials and information published on this
                                 website are accurate, but please note that all content materials and information on this
                                 website are provided on an ‘as is’ basis and the Client assumes total responsibility and
                                 risk for use of this website and use of all information contained within it.
@@ -822,7 +822,7 @@
 
                             <p>
                                 <strong class="font-semibold text-neutral-900">7.2.</strong>
-                                HBD accepts no liability for any loss or damage whether due to inaccuracy, error,
+                                Open School Education accepts no liability for any loss or damage whether due to inaccuracy, error,
                                 omission or any other cause.
                             </p>
 
@@ -830,7 +830,7 @@
                                 <strong class="font-semibold text-neutral-900">7.3.</strong>
                                 The Client is responsible for ensuring that his/her computer system meets all relevant
                                 technical specifications necessary to use this website and is compatible with this
-                                website. The Client also understands that HBD cannot and does not guarantee or warrant
+                                website. The Client also understands that Open School Education cannot and does not guarantee or warrant
                                 that any material available for downloading from this website will be free from
                                 infection, viruses and/or other code that has contaminating or destructive properties.
                                 The Client is responsible for implementing sufficient procedures and virus checks
@@ -1087,8 +1087,8 @@
                             <p>
                                 <strong class="font-semibold text-neutral-900">9.1.</strong>
                                 These terms and conditions together with the Privacy Policy are the whole agreement
-                                between HBD and the Client. The Client acknowledges that it has not entered into this
-                                agreement in reliance upon any statement, warranty or representation made by HBD or any
+                                between Open School Education and the Client. The Client acknowledges that it has not entered into this
+                                agreement in reliance upon any statement, warranty or representation made by Open School Education or any
                                 other person and irrevocably and unconditionally waives any rights to claim damages
                                 and/or to rescind these terms and conditions by reason of any misrepresentation (other
                                 than a fraudulent misrepresentation) that is not contained in the terms and conditions
@@ -1163,7 +1163,7 @@
                                         </div>
 
                                         <p class="font-semibold text-neutral-900">
-                                            HBD Services
+                                            Open School Education
                                         </p>
 
                                     </div>
@@ -1190,9 +1190,9 @@
 
                                         <div class="mt-1">
 
-                                            <a href="mailto:info@hbdservices.com"
+                                            <a href="mailto:info@openschooleducation.com"
                                                 class="font-semibold text-brand-600 transition-colors hover:text-brand-800 hover:underline">
-                                                info@hbdservices.com
+                                                info@openschooleducation.com
                                             </a>
 
                                         </div>
@@ -1236,7 +1236,7 @@
                                     </p>
 
                                     <p class="mt-0.5 text-xs leading-5 text-neutral-500">
-                                        Contact the HBD Services team for clarification.
+                                        Contact the Open School Education team for clarification.
                                     </p>
 
                                 </div>
@@ -1244,7 +1244,7 @@
                             </div>
 
 
-                            <a href="mailto:info@hbdservices.com"
+                            <a href="mailto:info@openschooleducation.com"
                                 class="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2.5 text-xs font-semibold text-brand-700 shadow-sm transition-all duration-200 hover:border-brand-300 hover:bg-brand-50 hover:shadow-md">
 
                                 Contact us

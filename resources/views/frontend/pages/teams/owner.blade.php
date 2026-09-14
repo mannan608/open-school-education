@@ -88,11 +88,11 @@
                                 </p>
 
                                 <p>
-                                    Chairman &amp; Founder of HBD Group Pty Ltd.
+                                    Chairman &amp; Founder of Open School Education Group Pty Ltd.
                                 </p>
 
                                 <p>
-                                    Chief Executive Officer of HBD Services
+                                    Chief Executive Officer of Open School Education
                                 </p>
 
                             </div>
@@ -269,7 +269,7 @@
                                 <div class="min-w-0 flex-1">
 
                                     <p class="max-w-4xl text-sm leading-6.5 text-slate-600 sm:text-[15px]  lg:text-[15px] ">
-                                        Since founding HBD Services in 2003, my mission has been to help
+                                        Since founding Open School Education in 2003, my mission has been to help
                                         Bangladeshi students make informed and achievable study-abroad
                                         decisions. Our experienced team supports students throughout the
                                         entire process—from selecting the right country, university, and
@@ -343,7 +343,7 @@
 
                                     <p
                                         class="mt-4 max-w-4xl text-sm font-semibold leading-6.5 text-slate-800 sm:text-[15px]">
-                                        At HBD Services, we are committed to guiding you toward a secure,
+                                        At Open School Education, we are committed to guiding you toward a secure,
                                         rewarding, and globally successful future.
                                     </p>
 
@@ -393,7 +393,7 @@
                                         </span>
 
                                         <span class="mt-0.5 text-xs text-slate-400">
-                                            HBD Services
+                                            Open School Education
                                         </span>
 
                                     </div>
@@ -406,7 +406,7 @@
 
                                     <p class="max-w-4xl text-sm leading-6.5 text-slate-600 sm:text-[15px] lg:text-[15px]">
                                         Md. Abu Shahdat Sarkar is the visionary Founder and Managing Director
-                                        of HBD Services, a premier educational consulting and training firm
+                                        of Open School Education, a premier educational consulting and training firm
                                         committed to helping Bangladeshi students gain access to higher
                                         educational and professional opportunities across Australia,
                                         New Zealand, the United Kingdom, and beyond. With vast experience in
@@ -477,7 +477,7 @@
                                         A graduate of Central Queensland University, Australia, with an MBA
                                         in Management Information Systems, Md. Sarkar's entrepreneurial
                                         journey began with a strong academic foundation and diverse real-world
-                                        experiences. In 2003, he founded HBD Services, revolutionizing
+                                        experiences. In 2003, he founded Open School Education, revolutionizing
                                         educational consulting by helping students secure admissions to
                                         prestigious universities in Australia, New Zealand, and the UK. His
                                         firm offers comprehensive guidance to students, ensuring they find the
@@ -601,7 +601,7 @@
                                         </span>
 
                                         <span class="mt-0.5 text-xs text-slate-400">
-                                            HBD Group
+                                            Open School Education Group
                                         </span>
 
                                     </div>
@@ -614,7 +614,7 @@
 
                                     <p class="max-w-4xl text-sm leading-6.5 text-slate-600 sm:text-[15px] lg:text-[15px]">
                                         In addition to his work in education, Md. Sarkar's entrepreneurial
-                                        vision extended to the real estate market, founding HBD Group Pty Ltd
+                                        vision extended to the real estate market, founding Open School Education Group Pty Ltd
                                         in 2015. The company offers real estate services in both Sydney and
                                         Dubai, helping the Bangladeshi community access quality housing and
                                         investment opportunities in key global markets. His successful ventures

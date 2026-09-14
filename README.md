@@ -1,4 +1,4 @@
-# HBD Services
+# Open School Education
 
 ### Check Your Environment
 
@@ -16,7 +16,7 @@ npm -v
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/mannan608/master-admin-hbd.git
+git clone https://github.com/mannan608/open-school-education.git
 cd project name
 ```
 

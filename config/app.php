@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'HBD Services'),
+    'name' => env('APP_NAME', 'Open School Education'),
 
     /*
     |--------------------------------------------------------------------------

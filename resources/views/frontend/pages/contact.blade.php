@@ -60,7 +60,7 @@
                                 </p>
 
                                 <p class="mt-1 break-all text-sm text-slate-500">
-                                    info@hbdservices.com
+                                    info@openschooleducation.com
                                 </p>
                             </div>
                         </div>

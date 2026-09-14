@@ -131,7 +131,7 @@
 
                     <div class="relative aspect-video w-full overflow-hidden">
                         <iframe class="absolute inset-0 h-full w-full" src="https://www.youtube.com/embed/gbJBcB1Dwos"
-                            title="HBD Services" frameborder="0"
+                            title="Open School Education" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
                         </iframe>

@@ -28,7 +28,7 @@
         </div>
     </section>
 
-    <!-- 3. Why Partner With HBD ServicesSection -->
+    <!-- 3. Why Partner With Open School EducationSection -->
     <section class="">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <header class="mx-auto max-w-2xl px-4 py-12 text-center  translate-y-10 transition-all duration-1000 ease-out">
@@ -47,7 +47,7 @@
                 <!-- Main Heading -->
                 <h1
                     class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl lg:text-5xl uppercase transition-all duration-700 delay-200">
-                    WHY PARTNER WITH HBD Services?
+                    WHY PARTNER WITH Open School Education?
                 </h1>
 
                 <!-- Subheading Description -->
@@ -117,7 +117,7 @@
             <div class="max-w-3xl mb-12">
                 <h2 class="text-xs font-bold uppercase tracking-widest text-brand-100 mb-2">Driven By Values</h2>
                 <p class="text-2xl sm:text-3xl font-bold leading-snug">
-                    HBD Servicesis an Australian technology-based education and migration consultancy guiding students with
+                    Open School Educationis an Australian technology-based education and migration consultancy guiding students with
                     complete confidence.
                 </p>
             </div>

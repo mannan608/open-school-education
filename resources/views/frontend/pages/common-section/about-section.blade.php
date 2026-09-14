@@ -7,7 +7,7 @@
                     <!-- Main Image -->
                     <div class=" relative overflow-hidden rounded-[2rem] aspect-[4/3] bg-slate-100 shadow-2xl shadow-slate-200/60 ">
                         <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=85"
-                            alt="HBD Services Team Collaboration" loading="lazy" decoding="async" fetchpriority="low"
+                            alt="Open School Education Team Collaboration" loading="lazy" decoding="async" fetchpriority="low"
                             class=" w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 " />
                         <!-- Image Overlay -->
                         <div class=" absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent ">
@@ -58,7 +58,7 @@
                     <!-- Description -->
                     <div class="mt-6 space-y-4">
                         <p class=" text-base sm:text-lg text-slate-600 leading-8 ">
-                            HBD Services is an Australian technology-based education and migration consultancy. We help international students
+                            Open School Education is an Australian technology-based education and migration consultancy. We help international students
                             explore Australian programs, get expert guidance, and apply with complete confidence.
                         </p>
                         <p class=" text-sm sm:text-base text-slate-500 leading-7 ">

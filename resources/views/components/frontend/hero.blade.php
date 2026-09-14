@@ -25,7 +25,7 @@
                     </h1>
 
                     <p class="text-white/90 text-sm sm:text-base lg:text-lg mt-5 mb-8 lg:mb-12 leading-relaxed text-center md:text-left">
-                        HBD Services Australia offers a range of
+                        Open School Education Australia offers a range of
                         industry-relevant courses which includes Advanced Diploma
                         of Information Technology, Advanced Diploma of Leadership
                         and Management, Diploma of Information Technology,

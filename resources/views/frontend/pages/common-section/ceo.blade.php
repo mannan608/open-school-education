@@ -38,7 +38,7 @@
             {{-- Message --}}
             <p
                 class="mt-7 max-w-[590px] font-sans text-[13px] font-normal leading-[1.9] text-slate-300 sm:text-sm">
-                HBD Services started as a student recruitment agency,
+                Open School Education started as a student recruitment agency,
                 partnering with top-ranking education institutions in
                 Australia. Today, it has grown into one of the leading
                 study abroad counselling agencies, operating across
@@ -47,7 +47,7 @@
 
             <p
                 class="mt-4 max-w-[590px] font-sans text-[13px] font-normal leading-[1.9] text-slate-400 sm:text-sm">
-                Over the years, HBD Services has expanded its portfolio
+                Over the years, Open School Education has expanded its portfolio
                 to include three accredited training organizations,
                 offering Diploma and Advanced Diploma programs to
                 on-shore students in Australia. 
@@ -80,7 +80,7 @@
                 <p class="mt-1 text-[10px] font-medium uppercase tracking-[0.16em] text-slate-500">
                     Chief Executive Officer
                     <span class="mx-1 text-brand-700">•</span>
-                    HBD Services
+                    Open School Education
                 </p>
 
             </div>
@@ -173,7 +173,7 @@
             {{-- CEO Image --}}
             <img
                 src="{{ asset('frontend-img/ceo.png') }}"
-                alt="Abu Shahdat Sarkar - CEO of HBD Services"
+                alt="Abu Shahdat Sarkar - CEO of Open School Education"
                 class="absolute bottom-0 left-1/2 z-10
                        h-[340px] w-auto max-w-[90%]
                        -translate-x-1/2 object-contain object-bottom

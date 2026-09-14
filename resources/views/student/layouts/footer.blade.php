@@ -24,7 +24,7 @@
         <div>
           <h4 class="text-white text-base font-bold uppercase tracking-wider mb-4">About us</h4>
           <ul class="space-y-2 text-[15px]">
-            <li><a href="{{ route('about') }}" class="hover:text-brand-400 transition">About HBD Services</a></li>
+            <li><a href="{{ route('about') }}" class="hover:text-brand-400 transition">About Us</a></li>
             <li><a href="#" class="hover:text-brand-400 transition">Book Your Appointment</a></li>
             <li><a href="#" class="hover:text-brand-400 transition">IELTS/PTE Registration</a></li>
             <li><a href="#" class="hover:text-brand-400 transition">Claims</a></li>
@@ -57,7 +57,7 @@
       </div>
 
       <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-[15px] text-slate-500 gap-4">
-        <p class="text-center text-sm md:text-sm">© 2024 HBD Services. All rights reserved. Registered CRICOS Advisory Partner.</p>
+        <p class="text-center text-sm md:text-sm">© 2024 Open School Education. All rights reserved. Registered CRICOS Advisory Partner.</p>
         <div class="flex space-x-6 text-sm">
           <a href="{{ route('privacy-policy')}}" class="hover:text-slate-300">Privacy Policy</a>
           <a href="{{ route('terms-conditions')}}" class="hover:text-slate-300">Terms of Service</a>

@@ -52,7 +52,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                                 </svg>
-                                <span>Organized by <strong class="text-brand-500 font-medium">HBD Services</strong></span>
+                                <span>Organized by <strong class="text-brand-500 font-medium">Open School Education</strong></span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor"
@@ -81,7 +81,7 @@
                     <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-neutral-900 mb-4">Application Day –
                         Surabaya: Study in Australia</h3>
                     <p class="text-neutral-600 leading-relaxed text-sm">
-                        Take the first step toward your global education! Join HBD Services to meet official representatives
+                        Take the first step toward your global education! Join Open School Education to meet official representatives
                         from
                         <strong class="text-neutral-800">The University of Notre Dame Australia</strong> and
                         <strong class="text-neutral-800">Oxford International Education Group</strong>. Whether you are just
@@ -238,7 +238,7 @@
                             </div>
                             <div>
                                 <p class="text-xs text-neutral-400">Name</p>
-                                <p class="font-semibold text-neutral-800">HBD Services</p>
+                                <p class="font-semibold text-neutral-800">Open School Education</p>
                             </div>
                         </div>
 
@@ -253,8 +253,8 @@
                             </div>
                             <div>
                                 <p class="text-xs text-neutral-400">Email</p>
-                                <a href="mailto:enquiry@hbdervices.com.au"
-                                    class="font-medium text-brand-600 hover:underline">enquiry@hbdervices.com.au</a>
+                                <a href="mailto:enquiry@Open School Educationervices.com.au"
+                                    class="font-medium text-brand-600 hover:underline">enquiry@Open School Educationervices.com.au</a>
                             </div>
                         </div>
 
@@ -395,7 +395,7 @@
                 <h3 class="text-lg font-bold text-neutral-900 mb-2">Providers of Accommodation</h3>
                 <p class="text-sm text-neutral-600 leading-relaxed">
                     Students can book airport pickup service from Australia borders or regional areas back to Adelaide's
-                    buildings via booking made on the HBD Services account to join regular weekly arrival points at the
+                    buildings via booking made on the Open School Education account to join regular weekly arrival points at the
                     Accommodation Center.
                 </p>
                 <div class="flex flex-wrap items-center gap-4 mt-4">

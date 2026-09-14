@@ -23,7 +23,7 @@
                             {{-- Meta Info --}}
                             <div class="flex flex-wrap items-center gap-2 md:gap-4 text-xs sm:text-sm text-neutral-500 mb-5">
                                 <span>
-                                    By HBD Services
+                                    By Open School Education
                                 </span>
 
                                 <span>
