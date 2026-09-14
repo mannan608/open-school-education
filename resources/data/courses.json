@@ -3,7 +3,7 @@
         "code": "AUR30320",
         "category_slug": "automotive-retail-service-and-repair",
         "level": "Certificate III",
-        "name": "Certificate III in Automotive Electrical Technology",
+        "name": "Automotive Electrical Technology",
         "slug": "certificate-iii-in-automotive-electrical-technology",
 
         "image": "/industry/automotive/AUR30320.jpg",
@@ -13,7 +13,6 @@
         "hero_description": "Are you working 20+ hours per week performing automotive electrical services in vehicles? With Recognition of Prior Learning (RPL), you can use your existing skills and work experience to gain this qualification without classroom study.",
 
         "key_information": {
-            "course_code": "AUR30320",
             "duration": "Estimated 4–12 weeks",
             "delivery": "RPL"
         },
@@ -32,39 +31,15 @@
         "course_url": "https://training.gov.au/training/details/AUR30320/qualdetails",
 
        
-        "overview": {
-            "label": "Qualification Overview",
-            "title": "Certify Your Skills and Advance Your Career",
-            "description": "If your daily work involves diagnosing, servicing, installing, and repairing electrical wiring, electronic modules, ignition systems, and auxiliary electronics in modern motor vehicles, certifying your capability with an official AUR30320 Certificate III can help formalise your existing skills and experience."
-        },
+          "overview": "If your work involves performing a range of services, diagnosing and repairing electrical systems and components in vehicles in the automotive electrical service and repair industry, then, certifying your skills with an AUR30320 – Certificate III in Automotive Electrical Technology qualification can significantly enhance your career prospects. This qualification can open doors to roles such as Automotive Electrical Technician. These positions not only come with greater responsibilities but also offer higher pay, as many employers prefer and reward employees with recognized qualifications. By formalizing your experience through Recognition of Prior Learning (RPL), you position yourself for long-term success and advancement in this expanding sector.",
+       
 
-        "benefits": [
-            {
-                "icon": "lucide:school",
-                "title": "No Classroom Sitting",
-                "description": "Convert your existing on-the-job vehicle service experience into recognised units of competency without interrupting your paid job."
-            },
-            {
-                "icon": "lucide:zap",
-                "title": "Fast-Track Timeline",
-                "description": "Achieve your certificate in an estimated 4 to 12 weeks once your workplace evidence, videos, and referee reports are compiled."
-            },
-            {
-                "icon": "lucide:file-check-2",
-                "title": "Trade Licensing Ready",
-                "description": "AUR30320 provides the foundational technical qualification relevant to trade licensing and motor vehicle repair requirements."
-            },
-            {
-                "icon": "lucide:trending-up",
-                "title": "Higher Earning Potential",
-                "description": "Formal trade credentials can help position experienced automotive electricians for higher-level roles and specialist opportunities."
-            }
-        ],
+ 
 
         "graduate_outcomes": {
             "label": "Graduate Outcomes",
             "title": "Career Outcomes That Show the Value of Qualification",
-            "description": "Did you know that 88.1% of Certificate III in Automotive Electrical Technology graduates secured a new job, earned a promotion, or received higher pay after obtaining their qualification?",
+            "description": "Did you know that 88.1% of Certificate III in Automotive Electrical Technology graduates secured a new job, transitioned into more skilled roles, earned a promotion, or received higher pay after obtaining their qualification?",
             "source_note": "Verified Australian Vocational Education and Training (NCVER) industry graduate outcome benchmarks.",
 
             "overall_outcome": {
@@ -101,32 +76,57 @@
         },
         "career_pathways": {
             "title": "Further Open School Education Qualifications (Career Pathways)",
-            "description": "Gaining an automotive qualification can provide a foundation for further professional development and progression into more specialised technical, diagnostic, supervisory or management roles.",
+            "description": "Gaining a Certificate III in Individual Support can also be a stepping stone to more specialized roles and can open up opportunities for professional development and career pathways.",
             "related_category": "Mechanical and Electrical, Body Repair Technology, Refinishing or Management and Technologies"
         },
 
-        "faq": [
-            {
-                "question": "Am I eligible for RPL recognition?",
-                "answer": "If you have relevant work experience, informal training, or existing skills in automotive electrical systems — such as working on vehicle electrical services — you may be eligible. A free preliminary assessment can help determine your suitability."
-            },
-            {
-                "question": "What evidence is required to qualify?",
-                "answer": "Standard evidence may include work logs, photos or videos of completed work, employer references, a resume detailing relevant experience, payslips, previous transcripts or certificates. An assessor confirms the exact requirements for your situation."
-            },
-            {
-                "question": "How long does the RPL process take?",
-                "answer": "The estimated duration is around 4–12 weeks depending on your existing experience, the quality of your evidence and any outstanding assessment requirements."
-            },
-            {
-                "question": "Is this qualification nationally recognised?",
-                "answer": "Yes. AUR30320 – Certificate III in Automotive Electrical Technology is a nationally recognised Australian qualification. Training and assessment are provided through the relevant Registered Training Organisation."
-            },
-            {
-                "question": "Do I need to attend any classes?",
-                "answer": "No classroom attendance may be required when completing the qualification through an RPL pathway. RPL assesses the skills and knowledge you already have. If gaps are identified, additional training or assessment may be recommended."
-            }
+       "faq": [
+    {
+        "question": "Who can apply for RPL?",
+        "answer": [
+            "Seasoned Professionals: Individuals with extensive experience in their field but lacking a current formal qualification.",
+            "Experienced Workers: Workers who began their careers before formal qualifications became a requirement.",
+            "Qualification Upgraders: Professionals seeking to upgrade their qualifications by having their practical experience recognized.",
+            "Career Progressors (CPD): Employees aiming to advance in their careers by formally validating their skills.",
+            "Advanced Learners: Individuals looking to pursue further education who can obtain course credits by demonstrating existing expertise in the qualification units."
         ]
+    },
+    {
+        "question": "Comprehensive Evidence for RPL in Certificate III in Automotive Electrical Technology?",
+        "answer": [
+            "Below is the list of documents we need from you to review and submit to the RTO for your RPL assessment application:",
+            "100 Points of ID: Accepted documents include: driver’s license, passport, Medicare card, proof of age card, key pass, and utility bills (For more information, refer to the guidelines on 100 Points of ID)",
+            "Updated Resume: With your current skills, experiences, and employment history (more info)",
+            "USI Number: If you don’t have one, you can create one at www.usi.gov.au",
+            "Employment Contracts or Job Offer Letters",
+            "Reference letter from your employer or senior management, detailing your job description (must be on company letterhead)",
+            "Pay slips or invoices (optional) with your name.",
+            "Academic documents with transcripts (Ex: first aid, diploma, bachelor, certificate ii, iii, iv, year 12 certificate etc.)",
+            "Working with Children Check (if applicable)",
+            "Additional Supporting Evidence: This could include: Excel files, plans, other work samples, or any documentation aligned with the unit outline to demonstrate your competency in the applied qualification.",
+            "Important Notes: The RTO may contact you for further evidence. An RTO assessor might conduct a competency interview. Gap training may be required to address any areas of improvement and ensure a positive assessment outcome."
+        ]
+    },
+    {
+        "question": "Regulatory Requirements",
+        "answer": "No licensing, legislative or certification requirements apply to this qualification at the time of publication."
+    },
+    {
+        "question": "What Are the Benefits of RPL?",
+        "answer": [
+            "Nationally Recognized Qualification awarded by a Registered Training Organization (RTO) in Australia",
+            "Fast, Easy and cost-effective",
+            "Career Advancement",
+            "Continuous Professional Development (CPD)",
+            "Meet Industry and Licensing Standards and prerequisites",
+            "Can Assist in Immigration and Visa Applications",
+            "Recognize volunteer experience",
+            "Best Price Guaranteed by Open School Education"
+        ]
+    }
+]
+
+
         
     }
 ]

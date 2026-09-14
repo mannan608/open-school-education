@@ -1,9 +1,6 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-
-
-
     {{-- Hero Section --}}
     <section class="relative isolate overflow-hidden bg-brand-950 text-white">
 
@@ -75,114 +72,131 @@
 
 
     {{-- INDUSTRY DETAILS & OVERVIEW --}}
-   <section class="relative  bg-slate-50/50 pt-12 md:pt-16 lg:pt-20">
+    <section class="relative  bg-slate-50/50 pt-12 md:pt-16 lg:pt-20">
 
-    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div class="grid grid-cols-1 items-stretch gap-6 md:gap-8 lg:grid-cols-12 lg:gap-12">
+            <div class="grid grid-cols-1 items-stretch gap-6 md:gap-8 lg:grid-cols-12 lg:gap-12">
 
-            {{-- =================================================
+                {{-- =================================================
                 LEFT — INDUSTRY OVERVIEW
             ================================================== --}}
-            <div class="flex flex-col justify-center lg:col-span-7">
+                <div class="flex flex-col justify-center lg:col-span-7">
 
-                {{-- Section Badge --}}
-                <div class="mb-6 flex items-center">
-                    <span class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-brand-50/80 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-700 shadow-sm backdrop-blur-md">
-                        <span class="h-1.5 w-1.5 rounded-full bg-brand-600"></span>
-                        Industry Background
-                    </span>
-                </div>
+                    {{-- Section Badge --}}
+                    <div class="mb-6 flex items-center">
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-brand-50/80 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-700 shadow-sm backdrop-blur-md">
+                            <span class="h-1.5 w-1.5 rounded-full bg-brand-600"></span>
+                            Industry Background
+                        </span>
+                    </div>
 
-                {{-- Main Heading --}}
-                <h2 class="max-w-2xl text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
-                    Understanding the
-                    <span class="bg-gradient-to-r from-brand-600 via-brand-600 to-brand-700 bg-clip-text text-transparent">
-                        Industry
-                    </span>
-                </h2>
+                    {{-- Main Heading --}}
+                    <h2
+                        class="max-w-2xl text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
+                        Understanding the
+                        <span
+                            class="bg-gradient-to-r from-brand-600 via-brand-600 to-brand-700 bg-clip-text text-transparent">
+                            Industry
+                        </span>
+                    </h2>
 
-                {{-- Subtitle / Intro --}}
-                <p class="mt-5 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-lg">
-                    Discover the skills, knowledge, and professional capabilities recognised across the
-                    <span class="font-bold text-slate-900   ">
-                        {{ $industry['name'] }}
-                    </span>
-                    sector.
-                </p>
+                    {{-- Subtitle / Intro --}}
+                    <p class="mt-5 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-lg">
+                        Discover the skills, knowledge, and professional capabilities recognised across the
+                        <span class="font-bold text-slate-900   ">
+                            {{ $industry['name'] }}
+                        </span>
+                        sector.
+                    </p>
 
-                {{-- Overview Content Block --}}
-                <div class="relative mt-8 ">
-                    <p class="text-sm leading-8 text-slate-600 sm:text-base sm:leading-8">
+                    {{-- Overview Content Block --}}
+                    <div class="relative mt-8 ">
+                        <p class="text-sm leading-8 text-slate-600 sm:text-base sm:leading-8">
                             {{ $industry['overview'] }}
                         </p>
+                    </div>
+
                 </div>
 
-            </div>
 
-
-            {{-- =================================================
+                {{-- =================================================
                 RIGHT — SKILLS & PROFICIENCIES
             ================================================== --}}
-            <div class="flex flex-col justify-center lg:col-span-5">
+                <div class="flex flex-col justify-center lg:col-span-5">
 
-                <div class="grid gap-4 sm:gap-5">
+                    <div class="grid gap-4 sm:gap-5">
 
-                    {{-- Card 1: Industry Skills --}}
-                    <div class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/5">
-                        <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600 ring-1 ring-brand-500/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white group-hover:shadow-md group-hover:shadow-brand-500/20">
-                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-base font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
-                                    Industry Skills
-                                </h3>
-                                <p class="mt-1 text-sm leading-relaxed text-slate-500">
-                                    Practical skills aligned directly with modern workplace requirements.
-                                </p>
+                        {{-- Card 1: Industry Skills --}}
+                        <div
+                            class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/5">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600 ring-1 ring-brand-500/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white group-hover:shadow-md group-hover:shadow-brand-500/20">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3
+                                        class="text-base font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                                        Industry Skills
+                                    </h3>
+                                    <p class="mt-1 text-sm leading-relaxed text-slate-500">
+                                        Practical skills aligned directly with modern workplace requirements.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    {{-- Card 2: Recognition --}}
-                    <div class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-500/5">
-                        <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-500/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white group-hover:shadow-md group-hover:shadow-emerald-500/20">
-                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-base font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
-                                    Formal Recognition
-                                </h3>
-                                <p class="mt-1 text-sm leading-relaxed text-slate-500">
-                                    Official recognition pathways for your existing skills and prior experience.
-                                </p>
+                        {{-- Card 2: Recognition --}}
+                        <div
+                            class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-500/5">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-500/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white group-hover:shadow-md group-hover:shadow-emerald-500/20">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3
+                                        class="text-base font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                                        Formal Recognition
+                                    </h3>
+                                    <p class="mt-1 text-sm leading-relaxed text-slate-500">
+                                        Official recognition pathways for your existing skills and prior experience.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    {{-- Card 3: Career Growth --}}
-                    <div class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-xl hover:shadow-violet-500/5">
-                        <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-violet-50 text-violet-600 ring-1 ring-violet-500/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-violet-600 group-hover:text-white group-hover:shadow-md group-hover:shadow-violet-500/20">
-                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-base font-bold text-slate-900 group-hover:text-violet-600 transition-colors">
-                                    Career Growth
-                                </h3>
-                                <p class="mt-1 text-sm leading-relaxed text-slate-500">
-                                    Qualification pathways designed strategically to accelerate your career.
-                                </p>
+                        {{-- Card 3: Career Growth --}}
+                        <div
+                            class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-xl hover:shadow-violet-500/5">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-violet-50 text-violet-600 ring-1 ring-violet-500/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-violet-600 group-hover:text-white group-hover:shadow-md group-hover:shadow-violet-500/20">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3
+                                        class="text-base font-bold text-slate-900 group-hover:text-violet-600 transition-colors">
+                                        Career Growth
+                                    </h3>
+                                    <p class="mt-1 text-sm leading-relaxed text-slate-500">
+                                        Qualification pathways designed strategically to accelerate your career.
+                                    </p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -191,9 +205,7 @@
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
     {{-- COURSE SECTION --}}
     <section id="courses" x-data="{
@@ -233,7 +245,7 @@
 
                     <p class="mt-4 text-sm leading-7 text-slate-600">
                         Explore qualifications available within the
-                        {{ $industry['name'] }}
+                       <span class="font-bold text-black"> {{ $industry['name'] }}</span>
                         industry and find the pathway that best matches your skills and experience.
                     </p>
 
@@ -271,6 +283,7 @@
             </div>
             {{-- Cards Grid --}}
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+
                 <template x-for="course in filteredCourses" :key="course.code">
                     <article
                         class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
@@ -280,8 +293,7 @@
                             <img :src="course.image" :alt="course.name"
                                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
 
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-transparent">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-transparent">
                             </div>
 
                             <span
@@ -301,8 +313,9 @@
                                 <h3 class="text-base md:text-lg font-bold leading-snug text-slate-900 group-hover:text-brand-600 transition-colors"
                                     x-text="course.name"></h3>
 
+                                <!-- FIXED: Changed course.description to course.short_description -->
                                 <p class="mt-3 text-sm leading-relaxed text-slate-600 line-clamp-3"
-                                    x-text="course.description"></p>
+                                    x-text="course.short_description"></p>
 
                                 {{-- Provider & Assessment details --}}
                                 <div class="mt-4 space-y-2 border-t border-slate-100 pt-4 text-sm text-slate-500">
@@ -312,9 +325,10 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                                         </svg>
+                                        <!-- FIXED: Mapped providers array to display names correctly -->
                                         <span class="line-clamp-1"><strong
                                                 class="font-semibold text-slate-700 uppercase">Providers : </strong> <span
-                                                x-text="course.providers"></span></span>
+                                                x-text="course.providers.map(p => p.name).join(', ')"></span></span>
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <svg class="h-4 w-4 shrink-0 text-emerald-500" fill="none"
@@ -322,8 +336,9 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
+                                        <!-- FIXED: Mapped rto_codes from the providers array -->
                                         <span><strong class="font-semibold text-slate-700 uppercase">RTO CODE :</strong>
-                                            <span x-text="course.rto_code"></span></span>
+                                            <span x-text="course.providers.map(p => p.rto_code).join(', ')"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -334,7 +349,7 @@
                                     class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">
                                     <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> RPL Available
                                 </span>
-                                
+
                                 <a :href="'{{ route('course.show', ['slug' => '__SLUG__']) }}'.replace('__SLUG__', course.slug)"
                                     class="inline-flex items-center gap-1.5 rounded-lg bg-brand-600 px-4 py-2 text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-700 hover:shadow">
                                     Read More

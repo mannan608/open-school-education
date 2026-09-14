@@ -539,58 +539,6 @@
 
         </div>
 
-
-        @php
-            $industries = [
-                [
-                    'title' => 'Automotive Retail, Service and Repair',
-                    'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHrIRwztn8gP4qEG1Y53JuPtlMDnrbzTPo6QMqfp8keKB3FF8GuVRpuZQgThSBrbRrTV4eiUfAK1eirVwtNbvIVCAfp17wMjhIhiF_kNibIQ-n_KPvVX6qlO-49yEe5tMCS5KozQG5m5w9s458Eqhh0BmQUKeW1Dc3XEbuxyIIPHiXkmIgFT23m3vDPYszWsNoP6F28a-G0RMULdseQtkThAribv07WcmFIpRCuFyqaivMchtl_zO9qg',
-                    'alt' => 'Automotive technician working on vehicle'
-                ],
-                [
-                    'title' => 'Business Services',
-                    'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbSQRyR3No3Vkfc3-TJN_lVBK781lSbSyhpJHI2xwmSc72hRzhVUxgN7QuXVxYqCk3n_k4qBFZQzJDqVt_c1a13IFUwzUcV2pPcgLOyhU2kY_dcB9Ci3Gwb2RPvzpk9iWSt0v_8kfuFsCJtxK8rcuvozMDI9N3vZgfbHFAREFBP2YmUwtcg8ZyyLUfH_Fj1pUWAm4_wgjo0rLr0HRltXpCzA8fjtSPNaDDzii5Xi0YZy8Iw1ETA9nIfw',
-                    'alt' => 'Business team collaborating in office'
-                ],
-                [
-                    'title' => 'Community Services',
-                    'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuALVixIP_LGEeGztdT2_3KwixSGc3GeEkKqmNtQNHhkyjUs3YIFW374K4GyZdhd-yk8kW5U30BRWcK78CB5LgDieUcaXneofsKhBVoJUz5wzvr0VWeAjyzW_ZKItF6O-m5SyBF9ZxnKCHWjgL3mjYJeKMnI_vnmExTXeKsg-0IHKuSsV170kWlDLekDBvWedt_Pfchxz6FsCRuSjIGPWjJDdus6HFlbiga77GCWyJ2sm9G78cRxIIMlCg',
-                    'alt' => 'Community caretakers and workers'
-                ],
-                [
-                    'title' => 'Construction, Plumbing and Services',
-                    'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHCkkYt-42xT5efi52csKdwDqHtJmm82sY1cQHgK92NsRh4MUEjYWwTTs187Ft6IgA73e7tmtYEkNhDqoehENqfHQi-yU4e0yOJRjgXEH4RUJTpEajsg2haSIEpgkfEOvrMQudJYMXh-AIAqrkb7KyPwkYEzK2YqWohQ7VaNJSpb7j6GH1wJ73i90mZz1BL_JzUAToZHjCwCrzKuvIYCIwbDlQ2UOnWf3esbxjJVItICVykps_KpRwwA',
-                    'alt' => 'Construction and plumbing site'
-                ],
-                [
-                    'title' => 'Manufacturing',
-                    'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuA21mSeYipxkCOlYYyUbEdLna2UUy1iYSzFWTDAjs3ylqpg-anAAmEiR-JZgFVf3ag4xbW4VH4VNusl0zu9A4GPRS36ox8IQLSWzhcRNHP405VoZ0vLiX8e5JiTBZyXUiRSSr2yLljrrNspdNBYE3H231ck5tfIMiQnBMYeBaEnfyJZGq0v3Wv8MKn2gU_jTd0w1z_eYML8kr7Ppz0ffsCIfQRgoE9Gpoiz5QKCV7vb5FGAu-jxRknurg',
-                    'alt' => 'Engineers working in manufacturing plant'
-                ],
-                [
-                    'title' => 'Information and Communications Technology',
-                    'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuC1PnwsW638l_pDSFb0KRrf2r_mk4IESN9DlOXm71mpptoKtwBj98pt3a4jSQwQ703OqNjCnRcIksa0gUbRnoMt_JyoQu6BrVQz0kChBSznNAFGeAf7x3806bLxmegwXOR9bnPS24U_1l7wsGdAqN0UAgz9bP9m3DbwKno58Z2la2l0CdsEYdKbPMI_HBnGvZPwUxRy7hSL6s102_6j2qDvUSApyQx__GFUfuD07NNE4W9bIch_JU_HoQ',
-                    'alt' => 'IT technicians in modern server room'
-                ],
-                [
-                    'title' => 'Resources and Infrastructure Industry',
-                    'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuDMCm0Y-WDyhsVfvnC8QhfGJg8jJka5_-i2-76fQiwNkpxHx_qCb0kpJGkMtdCEu8IbeQOMJ5mJLDiAUXzDrVegN-F_crqBgEqG82SvIAjiLGg2Q70oLrC7tQgUicCoJS-AgAE3fnPCIEdX5Yqhn1tGqT_3HGqZu_x4NP1jIdiHd61Ep26iayTPWVOUxufXPXYNr4Ccqn5FxEWuSGiBt_-C7q8LI6tYP6_P62Aa9Tb1gI01sOARiztdCA',
-                    'alt' => 'Infrastructure engineers inspecting equipment'
-                ],
-                [
-                    'title' => 'Hairdressing and Beauty Services',
-                    'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuBA-ERLZWr_vhoNNuaKTzbVW5NZ5bJc7nJqcao8c77gm-Lij8EbFVWZFjfmiqzJ7Pt_jt6NyRCUWgbrqD-O_msmkFGFDOHXCwpQZMFAXmfOtuuZjhhQS886R2FNNx-5D61tVheRS8RpV7A8V5f-hpdtTyIcclfscEdgRC5mLJMmHhE9K1wEe8DdGPrW5IWgUpBnUdlfLpmxCIYx-sAhy1K4pZLlsKEfoNavYGgsqLCA2_OqHK8ZIvHe5A',
-                    'alt' => 'Salon stylist styling client hair'
-                ],
-                [
-                    'title' => 'Tourism, Travel and Hospitality',
-                    'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuA4zyPSr8ckZLfcKOcyX3UjOzYq-8urUshQrSlvrg856Oih3WCw8koqDQlrHZAPtkk6EaoSeVy6_ubAoDVy-59uCaqRhXh7fjm3Gtgj8emo5wqkHb404GlLDpOQIY5dIuhWLl2_LDg4zg_dezryhkQu2jPY5oMh_nwUBLsGUw9AacfLo70aXIyoMfUstW-UZOSlUdR8lDYyxcuKzZXaXx0Mw-gkz2I8XYVEdMaQ0e2Cg4WaqhF-j3e6Rw',
-                    'alt' => 'Hospitality team at hotel travel lounge'
-                ]
-            ];
-        @endphp
-
-
         {{-- Industry grid --}}
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
@@ -603,7 +551,7 @@
 
                         <img
                             src="{{ $industry['image'] }}"
-                            alt="{{ $industry['alt'] }}"
+                            alt="{{ $industry['name'] }}"
                             class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                         >
 
@@ -620,11 +568,11 @@
                     <div class="p-5">
 
                         <h3 class="min-h-[48px] text-base font-extrabold leading-6 text-slate-900 transition group-hover:text-brand-600">
-                            {{ $industry['title'] }}
+                            {{ $industry['name'] }}
                         </h3>
 
                         <a
-                            href="#eligibility-form"
+                            href="{{ route('industries.index', $industry['slug']) }}"
                             class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs font-bold text-slate-700 transition hover:border-brand-500 hover:bg-brand-500 hover:text-white"
                         >
                             Explore Industry
@@ -660,10 +608,7 @@
 {{-- =========================================================
     CTA
 ========================================================= --}}
-<section
-    aria-label="Quick Application Callout"
-    class=" bg-white text-white py-16  lg:py-20"
->
+<section aria-label="Quick Application Callout"  class=" bg-white text-white py-16  lg:py-20">
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 

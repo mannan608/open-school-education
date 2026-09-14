@@ -74,7 +74,7 @@ class IndustryController extends Controller
 
         abort_if(!$category, 404);
 
-return $course;
+// return $course;
 
         return view('frontend.pages.industry.show', [
             'course' => $course,
