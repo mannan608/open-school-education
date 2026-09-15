@@ -78,6 +78,22 @@ class CheckEligibilityController extends Controller
 
         $data = $validator->validated();
 
+        $industries = json_decode(
+            File::get(resource_path('data/categories.json')),
+            true
+        );
+        $courses = json_decode(
+            File::get(resource_path('data/courses.json')),
+            true
+        );
+
+        $industry = collect($industries)->firstWhere('id', (int) $data['industry']);
+        $course = collect($courses)->firstWhere('name', $data['qualification']);
+        $industryName = $industry['name'] ?? $data['industry'];
+        $qualificationName = $course
+            ? "{$course['code']} {$course['name']}"
+            : $data['qualification'];
+
         /*
         |--------------------------------------------------------------------------
         | Save Application
@@ -106,13 +122,12 @@ class CheckEligibilityController extends Controller
 
         try {
             Mail::raw(
-                "New Eligibility Application\n\n".
                 "Application ID: {$application->id}\n".
                 "Name: {$application->first_name} {$application->last_name}\n".
                 "Phone: {$application->phone}\n".
                 "Email: {$application->email}\n".
-                "Industry: {$application->industry}\n".
-                "Qualification: {$application->qualification}\n".
+                "Industry: {$industryName}\n".
+                "Qualification: {$qualificationName}\n".
                 "Experience: {$application->experience_years} years\n".
                 "State: {$application->state}\n".
                 'Formal Qualification: '.
@@ -121,7 +136,7 @@ class CheckEligibilityController extends Controller
                     $message
                         ->to('mannan.hbdservices@gmail.com')
                         ->subject(
-                            'New Eligibility Application - Lia College'
+                            'New Eligibility Application - Open School Education'
                         );
                 }
             );
