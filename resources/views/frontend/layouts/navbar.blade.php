@@ -132,7 +132,7 @@
                 <a href="#"
                     class="{{ request()->routeIs('services') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">About
                     Us</a>
-                <a href="{{ route('courses') }}"
+                <a href="#"
                     class="{{ request()->routeIs('courses') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Courses</a>
                 <a href="#"
                     class="{{ request()->routeIs('counsellors') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">How
