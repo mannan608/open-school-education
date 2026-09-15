@@ -24,10 +24,8 @@ Route::get('/', [FrontendController::class, 'homePage'])->name('home');
 Route::get('/how-we-works', [FrontendController::class, 'howWeWork'])->name('how-we-works');
 Route::get('/about', [FrontendController::class, 'aboutPage'])->name('about');
 Route::get('/contact', [FrontendController::class, 'contactPage'])->name('contact');
-Route::get('/can-achieve', [FrontendController::class, 'achieve'])->name('achieve');
 Route::get('/privacy-policy', [FrontendController::class, 'privacyPolicy'])->name('privacy-policy');
 Route::get('/terms-conditions', [FrontendController::class, 'termsConditions'])->name('terms-conditions');
-Route::get('/ceo', [FrontendController::class, 'owner'])->name('owner');
 
 Route::post('/inquiry-us', [ContactController::class, 'store'])->name('contact.store');
 

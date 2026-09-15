@@ -68,6 +68,11 @@ class MenuHelper
                         'route' => 'role.contacts.index',
                         'permission' => 'contact.list',
                     ],
+                     [
+                        'name' => 'Contact Leads',
+                        'route' => 'role.contacts.index',
+                        'permission' => 'contact.list',
+                    ],
                 ],
             ],
              [
