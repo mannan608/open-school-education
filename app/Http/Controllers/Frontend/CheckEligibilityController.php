@@ -21,57 +21,40 @@ class CheckEligibilityController extends Controller
             true
         );
 
+        $courses = json_decode(
+            File::get(resource_path('data/courses.json')),
+            true
+        );        
+
         return view(
             'frontend.pages.check-eligibility.index',
-            compact('industries')
-        );
+            compact('industries', 'courses'));
     }
 
-    public function saveStep(Request $request): JsonResponse
+    public function submit(Request $request): JsonResponse
     {
-        $step = (int) $request->input('step');
+        $validator = Validator::make($request->all(), [
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255'],
+            'phone' => ['required', 'string', 'max:30'],
 
-        if (! in_array($step, [1, 2, 3])) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Invalid form step.',
-            ], 422);
-        }
-
-        /*
-        |--------------------------------------------------------------------------
-        | Validation
-        |--------------------------------------------------------------------------
-        */
-
-        $rules = match ($step) {
-            1 => [
-                'first_name' => ['required', 'string', 'max:255'],
-                'last_name' => ['required', 'string', 'max:255'],
-                'phone' => ['required', 'string', 'max:30'],
-                'email' => ['required', 'email', 'max:255'],
+            'industry' => ['required', 'string', 'max:255'],
+            'qualification' => ['required', 'string', 'max:255'],
+            'experience_years' => [
+                'required',
+                'integer',
+                'min:0',
+                'max:50'
             ],
 
-            2 => [
-                'industry' => ['required', 'string', 'max:255'],
-                'qualification' => ['required', 'string', 'max:255'],
-                'experience_years' => ['required', 'integer', 'min:0', 'max:50'],
-                'experience_location' => ['required', 'string', 'max:255'],
-                'has_formal_qualification' => ['required', 'boolean'],
+            'has_formal_qualification' => [
+                'required',
+                'boolean'
             ],
+            
 
-            3 => [
-                'state' => [
-                    'required',
-                    'string',
-                    'in:ACT,NSW,NT,QLD,SA,TAS,VIC,WA',
-                ],
-                'g-recaptcha-response' => ['nullable', 'string'],
-                'terms_accepted' => ['required', 'accepted'],
-            ],
-        };
-
-        $validator = Validator::make($request->all(), $rules);
+        ]);
 
         if ($validator->fails()) {
             return response()->json([
@@ -81,140 +64,64 @@ class CheckEligibilityController extends Controller
             ], 422);
         }
 
-        $validated = $validator->validated();
-
-        // The first step starts an application. Every subsequent step must
-        // update that same draft, rather than creating an incomplete record.
-        if ($step === 1) {
-            $application = new EligibilityApplication;
-        } else {
-            $applicationId = $request->integer('application_id');
-
-            if (! $applicationId) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Please complete your personal details before continuing.',
-                ], 422);
-            }
-
-            $application = EligibilityApplication::query()
-                ->whereKey($applicationId)
-                ->where('status', 'draft')
-                ->first();
-
-            if (! $application) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'This application is no longer available. Please start again.',
-                ], 422);
-            }
-
-            if ($application->current_step < $step - 1) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Please complete the previous step before continuing.',
-                ], 422);
-            }
-        }
+        $data = $validator->validated();
 
         /*
         |--------------------------------------------------------------------------
-        | Step 1
+        | Save Application
         |--------------------------------------------------------------------------
         */
 
-        if ($step === 1) {
-            $application->first_name = $validated['first_name'];
-            $application->last_name = $validated['last_name'];
-            $application->email = $validated['email'];
-            $application->phone = $validated['phone'];
+        $application = EligibilityApplication::create([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'email' => $data['email'],
+            'phone' => $data['phone'],
 
-            $application->current_step = 1;
-            $application->status = 'draft';
-
-            $application->save();
-
-            /*
-            |--------------------------------------------------------------------------
-            | Send Admin Email
-            |--------------------------------------------------------------------------
-            */
-
-            try {
-                Mail::raw(
-                    "New Eligibility Lead Registered\n\n".
-                    "Name: {$application->first_name} {$application->last_name}\n".
-                    "Phone: {$application->phone}\n".
-                    "Email: {$application->email}\n\n".
-                    "Application ID: {$application->id}\n".
-                    "Status: Draft\n".
-                    "Current Step: 1\n",
-                    function ($message) {
-                        $message
-                            ->to('mannan.hbdservices@gmail.com')
-                            ->subject('New Lead - Lia College Eligibility Form');
-                    }
-                );
-            } catch (Throwable $e) {
-                Log::error(
-                    'Eligibility Step 1 Mail Error: '.$e->getMessage()
-                );
-            }
-        }
+            'industry' => $data['industry'],
+            'qualification' => $data['qualification'],
+            'experience_years' => $data['experience_years'],
+            'has_formal_qualification' =>
+                $data['has_formal_qualification'],
+        ]);
 
         /*
         |--------------------------------------------------------------------------
-        | Step 2
+        | Send Email
         |--------------------------------------------------------------------------
         */
 
-        if ($step === 2) {
-            $application->industry = $validated['industry'];
-            $application->qualification = $validated['qualification'];
-            $application->experience_years = $validated['experience_years'];
-            $application->experience_location = $validated['experience_location'];
-            $application->has_formal_qualification =
-                $request->boolean('has_formal_qualification');
-
-            $application->current_step = 2;
-            $application->status = 'draft';
-
-            $application->save();
+        try {
+            Mail::raw(
+                "New Eligibility Application\n\n" .
+                "Application ID: {$application->id}\n" .
+                "Name: {$application->first_name} {$application->last_name}\n" .
+                "Phone: {$application->phone}\n" .
+                "Email: {$application->email}\n" .
+                "Industry: {$application->industry}\n" .
+                "Qualification: {$application->qualification}\n" .
+                "Experience: {$application->experience_years} years\n" .
+                "Formal Qualification: " .
+                ($application->has_formal_qualification ? 'Yes' : 'No'),
+                function ($message) {
+                    $message
+                        ->to('mannan.hbdservices@gmail.com')
+                        ->subject(
+                            'New Eligibility Application - Lia College'
+                        );
+                }
+            );
+        } catch (Throwable $e) {
+            Log::error('Eligibility Email Error', [
+                'application_id' => $application->id,
+                'error' => $e->getMessage(),
+            ]);
         }
-
-        /*
-        |--------------------------------------------------------------------------
-        | Step 3
-        |--------------------------------------------------------------------------
-        */
-
-        if ($step === 3) {
-            $application->state = $validated['state'];
-            $application->terms_accepted =
-                $request->boolean('terms_accepted');
-
-            $application->current_step = 3;
-            $application->status = 'submitted';
-
-            $application->save();
-        }
-
-        /*
-        |--------------------------------------------------------------------------
-        | Response
-        |--------------------------------------------------------------------------
-        */
 
         return response()->json([
             'success' => true,
-            'message' => $step === 3
-                ? 'Thank you! Your eligibility check has been submitted successfully.'
-                : 'Progress saved.',
-
-            'application_id' => $application->id,
-            'step' => $application->current_step,
-            'status' => $application->status,
-            'completed' => $application->status === 'submitted',
+            'message' =>
+                'Thank you! Your eligibility check has been submitted successfully.',
         ]);
     }
 }

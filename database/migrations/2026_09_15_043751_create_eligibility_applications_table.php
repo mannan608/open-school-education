@@ -20,16 +20,11 @@ return new class extends Migration
             $table->string('industry')->nullable();
             $table->string('qualification')->nullable();
             $table->integer('experience_years')->default(0);
-            $table->string('experience_location')->nullable(); // "Where is your work experience?"
             $table->boolean('has_formal_qualification')->default(false); // "Do you have formal qualifications?"
 
             // Step 3: Location & Terms
             $table->string('state')->nullable();
             $table->boolean('terms_accepted')->default(false);
-
-            // Tracking
-            $table->integer('current_step')->default(1);
-            $table->enum('status', ['draft', 'submitted'])->default('draft');
             $table->timestamps();
         });
     }

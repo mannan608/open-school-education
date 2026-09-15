@@ -108,8 +108,11 @@ Route::get('/industries/{slug}', [IndustryController::class, 'index'])
 Route::get('/courses/{slug}', [IndustryController::class, 'show'])
     ->name('course.show');
 
-Route::get('/check-eligibility', [CheckEligibilityController::class, 'index'])->name('eligibility');
-Route::post('/eligibility/step/save', [CheckEligibilityController::class, 'saveStep'])->name('eligibility.step.save');
+Route::get('/check-eligibility', [CheckEligibilityController::class, 'index'])
+    ->name('eligibility');
+
+Route::post('/eligibility/submit', [CheckEligibilityController::class, 'submit'])
+    ->name('eligibility.submit');
 
 //student routes
 Route::prefix('student')

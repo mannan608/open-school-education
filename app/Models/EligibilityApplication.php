@@ -17,19 +17,15 @@ class EligibilityApplication extends Model
         'industry',
         'qualification',
         'experience_years',
-        'experience_location',
         'has_formal_qualification',
         'state',
         'terms_accepted',
-        'current_step',
-        'status',
     ];
 
     protected $casts = [
         'has_formal_qualification' => 'boolean',
         'terms_accepted' => 'boolean',
         'experience_years' => 'integer',
-        'current_step' => 'integer',
     ];
 
     // Helper for full name
