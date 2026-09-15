@@ -24,11 +24,23 @@ class CheckEligibilityController extends Controller
         $courses = json_decode(
             File::get(resource_path('data/courses.json')),
             true
-        );        
+        );
+
+        $coursesByIndustry = collect($industries)
+            ->mapWithKeys(fn (array $industry) => [
+                (string) $industry['id'] => collect($courses)
+                    ->where('category_slug', $industry['slug'])
+                    ->map(fn (array $course) => [
+                        'code' => $course['code'],
+                        'name' => $course['name'],
+                    ])
+                    ->values(),
+            ]);
 
         return view(
             'frontend.pages.check-eligibility.index',
-            compact('industries', 'courses'));
+            compact('industries', 'coursesByIndustry')
+        );
     }
 
     public function submit(Request $request): JsonResponse
@@ -45,15 +57,15 @@ class CheckEligibilityController extends Controller
                 'required',
                 'integer',
                 'min:0',
-                'max:50'
+                'max:50',
             ],
 
             'has_formal_qualification' => [
                 'required',
-                'boolean'
+                'boolean',
             ],
-            
-
+            'state' => ['required', 'string', 'in:'.implode(',', array_keys(EligibilityApplication::STATES))],
+            'terms_accepted' => ['required', 'accepted'],
         ]);
 
         if ($validator->fails()) {
@@ -81,8 +93,9 @@ class CheckEligibilityController extends Controller
             'industry' => $data['industry'],
             'qualification' => $data['qualification'],
             'experience_years' => $data['experience_years'],
-            'has_formal_qualification' =>
-                $data['has_formal_qualification'],
+            'has_formal_qualification' => $data['has_formal_qualification'],
+            'state' => $data['state'],
+            'terms_accepted' => $data['terms_accepted'],
         ]);
 
         /*
@@ -93,15 +106,16 @@ class CheckEligibilityController extends Controller
 
         try {
             Mail::raw(
-                "New Eligibility Application\n\n" .
-                "Application ID: {$application->id}\n" .
-                "Name: {$application->first_name} {$application->last_name}\n" .
-                "Phone: {$application->phone}\n" .
-                "Email: {$application->email}\n" .
-                "Industry: {$application->industry}\n" .
-                "Qualification: {$application->qualification}\n" .
-                "Experience: {$application->experience_years} years\n" .
-                "Formal Qualification: " .
+                "New Eligibility Application\n\n".
+                "Application ID: {$application->id}\n".
+                "Name: {$application->first_name} {$application->last_name}\n".
+                "Phone: {$application->phone}\n".
+                "Email: {$application->email}\n".
+                "Industry: {$application->industry}\n".
+                "Qualification: {$application->qualification}\n".
+                "Experience: {$application->experience_years} years\n".
+                "State: {$application->state}\n".
+                'Formal Qualification: '.
                 ($application->has_formal_qualification ? 'Yes' : 'No'),
                 function ($message) {
                     $message
@@ -120,8 +134,7 @@ class CheckEligibilityController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' =>
-                'Thank you! Your eligibility check has been submitted successfully.',
+            'message' => 'Thank you! Your eligibility check has been submitted successfully.',
         ]);
     }
 }
