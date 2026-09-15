@@ -31,7 +31,7 @@ class CheckEligibilityController extends Controller
     {
         $step = (int) $request->input('step');
 
-        if (!in_array($step, [1, 2, 3])) {
+        if (! in_array($step, [1, 2, 3])) {
             return response()->json([
                 'success' => false,
                 'message' => 'Invalid form step.',
@@ -47,15 +47,15 @@ class CheckEligibilityController extends Controller
         $rules = match ($step) {
             1 => [
                 'first_name' => ['required', 'string', 'max:255'],
-                'last_name'  => ['required', 'string', 'max:255'],
-                'phone'      => ['required', 'string', 'max:30'],
-                'email'      => ['required', 'email', 'max:255'],
+                'last_name' => ['required', 'string', 'max:255'],
+                'phone' => ['required', 'string', 'max:30'],
+                'email' => ['required', 'email', 'max:255'],
             ],
 
             2 => [
-                'industry'            => ['required', 'string', 'max:255'],
-                'qualification'       => ['required', 'string', 'max:255'],
-                'experience_years'    => ['required', 'integer', 'min:0', 'max:50'],
+                'industry' => ['required', 'string', 'max:255'],
+                'qualification' => ['required', 'string', 'max:255'],
+                'experience_years' => ['required', 'integer', 'min:0', 'max:50'],
                 'experience_location' => ['required', 'string', 'max:255'],
                 'has_formal_qualification' => ['required', 'boolean'],
             ],
@@ -77,21 +77,45 @@ class CheckEligibilityController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => 'Please correct the highlighted errors.',
-                'errors'  => $validator->errors(),
+                'errors' => $validator->errors(),
             ], 422);
         }
 
-        /*
-        |--------------------------------------------------------------------------
-        | Create Application
-        |--------------------------------------------------------------------------
-        |
-        | No checking for existing records.
-        | Every Step 1 submission creates a new application.
-        |
-        */
+        $validated = $validator->validated();
 
-        $application = new EligibilityApplication();
+        // The first step starts an application. Every subsequent step must
+        // update that same draft, rather than creating an incomplete record.
+        if ($step === 1) {
+            $application = new EligibilityApplication;
+        } else {
+            $applicationId = $request->integer('application_id');
+
+            if (! $applicationId) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Please complete your personal details before continuing.',
+                ], 422);
+            }
+
+            $application = EligibilityApplication::query()
+                ->whereKey($applicationId)
+                ->where('status', 'draft')
+                ->first();
+
+            if (! $application) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'This application is no longer available. Please start again.',
+                ], 422);
+            }
+
+            if ($application->current_step < $step - 1) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Please complete the previous step before continuing.',
+                ], 422);
+            }
+        }
 
         /*
         |--------------------------------------------------------------------------
@@ -100,10 +124,10 @@ class CheckEligibilityController extends Controller
         */
 
         if ($step === 1) {
-            $application->first_name = $request->input('first_name');
-            $application->last_name  = $request->input('last_name');
-            $application->email      = $request->input('email');
-            $application->phone      = $request->input('phone');
+            $application->first_name = $validated['first_name'];
+            $application->last_name = $validated['last_name'];
+            $application->email = $validated['email'];
+            $application->phone = $validated['phone'];
 
             $application->current_step = 1;
             $application->status = 'draft';
@@ -118,22 +142,22 @@ class CheckEligibilityController extends Controller
 
             try {
                 Mail::raw(
-                    "New Eligibility Lead Registered\n\n" .
-                    "Name: {$application->first_name} {$application->last_name}\n" .
-                    "Phone: {$application->phone}\n" .
-                    "Email: {$application->email}\n\n" .
-                    "Application ID: {$application->id}\n" .
-                    "Status: Draft\n" .
+                    "New Eligibility Lead Registered\n\n".
+                    "Name: {$application->first_name} {$application->last_name}\n".
+                    "Phone: {$application->phone}\n".
+                    "Email: {$application->email}\n\n".
+                    "Application ID: {$application->id}\n".
+                    "Status: Draft\n".
                     "Current Step: 1\n",
                     function ($message) {
                         $message
-                            ->to('enrol@liacollege.edu.au')
+                            ->to('mannan.hbdservices@gmail.com')
                             ->subject('New Lead - Lia College Eligibility Form');
                     }
                 );
             } catch (Throwable $e) {
                 Log::error(
-                    'Eligibility Step 1 Mail Error: ' . $e->getMessage()
+                    'Eligibility Step 1 Mail Error: '.$e->getMessage()
                 );
             }
         }
@@ -145,10 +169,10 @@ class CheckEligibilityController extends Controller
         */
 
         if ($step === 2) {
-            $application->industry = $request->input('industry');
-            $application->qualification = $request->input('qualification');
-            $application->experience_years = $request->input('experience_years');
-            $application->experience_location = $request->input('experience_location');
+            $application->industry = $validated['industry'];
+            $application->qualification = $validated['qualification'];
+            $application->experience_years = $validated['experience_years'];
+            $application->experience_location = $validated['experience_location'];
             $application->has_formal_qualification =
                 $request->boolean('has_formal_qualification');
 
@@ -165,7 +189,7 @@ class CheckEligibilityController extends Controller
         */
 
         if ($step === 3) {
-            $application->state = $request->input('state');
+            $application->state = $validated['state'];
             $application->terms_accepted =
                 $request->boolean('terms_accepted');
 
