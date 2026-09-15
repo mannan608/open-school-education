@@ -23,7 +23,7 @@
              <div>
                  <h4 class="text-white text-base font-bold uppercase tracking-wider mb-4">About us</h4>
                  <ul class="space-y-2 text-[15px]">
-                     <li><a href="{{ route('about') }}" class="hover:text-brand-400 transition">About Us</a></li>
+                     <li><a href="#" class="hover:text-brand-400 transition">About Us</a></li>
                      <li><a href="#" class="hover:text-brand-400 transition">FAQs</a></li>
                      <li><a href="#" class="hover:text-brand-400 transition">Our Partners</a></li>
                      <li><a href="#" class="hover:text-brand-400 transition">Terms and Conditions</a></li>
@@ -34,15 +34,15 @@
              <div>
                  <h4 class="text-white text-base font-bold uppercase tracking-wider mb-4">Quick Links</h4>
                  <ul class="space-y-2 text-[15px]">
-                     <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Early Childhood
+                     <li><a href="#" class="hover:text-brand-400 transition">Early Childhood
                              Care</a></li>
-                     <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Individual Support</a>
+                     <li><a href="#" class="hover:text-brand-400 transition">Individual Support</a>
                      </li>
-                     <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Community Service</a>
+                     <li><a href="#" class="hover:text-brand-400 transition">Community Service</a>
                      </li>
-                     <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Construction &
+                     <li><a href="#" class="hover:text-brand-400 transition">Construction &
                              Trade</a></li>
-                     <li><a href="{{ route('courses') }}" class="hover:text-brand-400 transition">Tourism, Travel and
+                     <li><a href="#" class="hover:text-brand-400 transition">Tourism, Travel and
                              Hospitality</a></li>
                  </ul>
              </div>
@@ -78,9 +78,9 @@
              <p class="text-center text-xs md:text-sm">© 2026 Open School Education. All rights reserved. Registered
                  CRICOS Advisory Partner.</p>
              <div class="flex space-x-6 text-sm">
-                 <a href="{{ route('privacy-policy') }}" class="hover:text-slate-300">Privacy Policy</a>
-                 <a href="{{ route('terms-conditions') }}" class="hover:text-slate-300">Terms of Service</a>
-                 <a href="{{ route('contact') }}" class="hover:text-slate-300">Contact Us</a>
+                 <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+                 <a href="#" class="hover:text-slate-300">Terms of Service</a>
+                 <a href="#" class="hover:text-slate-300">Contact Us</a>
              </div>
 
          </div>
