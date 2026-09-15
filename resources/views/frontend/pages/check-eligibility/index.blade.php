@@ -318,7 +318,6 @@
 
             </form>
         </div>
-    </div>
 
     <!-- =========================================================
              SUCCESS MODAL
@@ -393,10 +392,7 @@
                 },
 
                 nextStep() {
-                    this.errors = {};
-                    this.formError = '';
-
-                    if (this.step < 3) {
+                    if (this.validateCurrentStep() && this.step < 3) {
                         this.step++;
                     }
                 },
@@ -410,10 +406,62 @@
                     }
                 },
 
-                async submitForm() {
-                    this.loading = true;
+                validateCurrentStep() {
                     this.errors = {};
                     this.formError = '';
+
+                    const required = (field, message) => {
+                        if (this.formData[field] === '' || this.formData[field] === null || this.formData[field] === false) {
+                            this.errors[field] = [message];
+                        }
+                    };
+
+                    if (this.step === 1) {
+                        required('first_name', 'Please enter your first name.');
+                        required('last_name', 'Please enter your last name.');
+                        required('email', 'Please enter your email address.');
+                        required('phone', 'Please enter your phone number.');
+
+                        if (this.formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.formData.email)) {
+                            this.errors.email = ['Please enter a valid email address.'];
+                        }
+                    }
+
+                    if (this.step === 2) {
+                        required('industry', 'Please select an industry.');
+                        required('qualification', 'Please select a qualification.');
+                        required('experience_years', 'Please enter your years of experience.');
+
+                        if (this.formData.experience_years !== '' &&
+                            (!Number.isInteger(Number(this.formData.experience_years)) || Number(this.formData.experience_years) < 0 || Number(this.formData.experience_years) > 50)) {
+                            this.errors.experience_years = ['Enter a whole number between 0 and 50.'];
+                        }
+                    }
+
+                    if (this.step === 3) {
+                        if (this.formData.has_formal_qualification === null) {
+                            this.errors.has_formal_qualification = ['Please choose Yes or No.'];
+                        }
+                        required('state', 'Please select your state or territory.');
+                        if (!this.formData.terms_accepted) {
+                            this.errors.terms_accepted = ['You must accept the privacy policy to continue.'];
+                        }
+                    }
+
+                    if (Object.keys(this.errors).length) {
+                        this.formError = 'Please correct the highlighted fields before continuing.';
+                        return false;
+                    }
+
+                    return true;
+                },
+
+                async submitForm() {
+                    if (!this.validateCurrentStep()) {
+                        return;
+                    }
+
+                    this.loading = true;
 
                     const csrfToken = document.querySelector(
                         'input[name="_token"]'
@@ -433,11 +481,13 @@
                             }
                         );
 
-                        const data = await response.json();
+                        const isJson = response.headers.get('content-type')?.includes('application/json');
+                        const data = isJson ? await response.json() : {};
 
                         if (response.ok && data.success) {
                             this.successMessage = data.message;
                             this.successModal = true;
+                            window.setTimeout(() => this.resetForm(), 4000);
                             return;
                         }
 
@@ -467,9 +517,32 @@
                 },
 
                 returnToStart() {
-                    window.location.reload();
+                    this.resetForm();
+                },
+
+                resetForm() {
+                    this.step = 1;
+                    this.loading = false;
+                    this.successModal = false;
+                    this.successMessage = '';
+                    this.errors = {};
+                    this.formError = '';
+                    this.formData = {
+                        first_name: '',
+                        last_name: '',
+                        email: '',
+                        phone: '',
+                        industry: '',
+                        qualification: '',
+                        experience_years: '',
+                        experience_location: '',
+                        has_formal_qualification: null,
+                        state: '',
+                        terms_accepted: false
+                    };
                 }
             }
         }
     </script>
+</div>
 @endsection
