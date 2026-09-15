@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Student\StudentController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Frontend\CheckEligibilityController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\CounsellorController;
 use App\Http\Controllers\Frontend\CourseController;
@@ -106,6 +107,9 @@ Route::get('/industries/{slug}', [IndustryController::class, 'index'])
     ->name('industries.index');
 Route::get('/courses/{slug}', [IndustryController::class, 'show'])
     ->name('course.show');
+
+Route::get('/check-eligibility', [CheckEligibilityController::class, 'index'])->name('eligibility');
+Route::post('/eligibility/step/save', [CheckEligibilityController::class, 'saveStep'])->name('eligibility.step.save');
 
 //student routes
 Route::prefix('student')
