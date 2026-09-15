@@ -53,110 +53,20 @@ class MenuHelper
                     ],
                 ],
             ],
-            [
-                'name' => 'People',
-                'icon' => 'user-profile',
-                'subItems' => [
-                    [
-                        'name' => 'Counsellors',
-                        'route' => 'role.counsellors.index',
-                        'permission' => 'counsellors.list',
-                    ],                   
-                    [
-                        'name' => 'Students',
-                        'route' => 'role.students.index',
-                        'permission' => 'student.list',
-                    ],
-                ],
-            ],
-            [
-                'name' => 'Academic Catalog',
-                'icon' => 'tables',
-                'subItems' => [
-                     [
-                        'name' => 'University',
-                        'route' => 'role.universities.index',
-                        'permission' => 'university.list',
-                    ],
-                    [
-                        'name' => 'Campus',
-                        'route' => 'role.campuses.index',
-                        'permission' => 'campus.list',
-                    ],
-                   [
-                        'name' => 'Categories',
-                        'route' => 'role.course-categories.index',
-                        'permission' => 'course-categories.list',
-                    ], 
-                    [
-                        'name' => 'Courses',
-                        'route' => 'role.courses.index',
-                        'permission' => 'course.list',
-                    ],
-                     [
-                        'name' => 'Course Intakes',
-                        'route' => 'role.course-intakes.index',
-                        'permission' => 'course-intakes.list',
-                    ],
-                     [
-                        'name' => 'Scholarships',
-                        'route' => 'role.scholarships.index',
-                        'permission' => 'scholarships.list',
-                    ],
-                ],
-            ],
-             [
-                'name' => 'Engagement',
-                'icon' => 'user-profile',
-                'subItems' => [
-                    [
-                        'name' => 'Events',
-                        'route' => 'role.events.index',
-                        'permission' => 'event.list',
-                    ],                
-                   
-                     [
-                        'name' => 'Career Pathways',
-                        'route' => 'role.career-pathways.index',
-                        'permission' => 'career-pathways.list',
-                    ],
-                ],
-            ],
-            [
-                'name' => 'AI & Tools',
-                'icon' => 'ai-assistant',
-                'subItems' => [
-                    [
-                        'name' => 'AI Chat Sessions',
-                        'route' => '',
-                        'permission' => '',
-                    ],                   
-                    [
-                        'name' => 'AI Usage Logs',
-                        'route' => 'role.ai-usage-logs.index',
-                        'permission' => 'ai-usage-logs.list',
-                    ],
-                ],
-            ],
-
+            
             [
                 'name' => 'Leads',
                 'icon' => 'chat',
                 'subItems' => [
                      [
-                        'name' => 'Event Leads',
+                        'name' => 'Eligibility Leads',
                         'route' => 'role.event-leads.index',
                         'permission' => 'event-leads.list',
                     ],
                     [
-                        'name' => 'Contact Enquiries',
+                        'name' => 'Courses Leads',
                         'route' => 'role.contacts.index',
                         'permission' => 'contact.list',
-                    ],
-                    [
-                        'name' => 'Counsellor Bookings',
-                        'route' => 'role.booking-sessions.index',
-                        'permission' => 'bookings.list',
                     ],
                 ],
             ],

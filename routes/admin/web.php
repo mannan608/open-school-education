@@ -2,22 +2,10 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BlogController;
-use App\Http\Controllers\Admin\CampusController;
-use App\Http\Controllers\Admin\CourseCategoryController;
-use App\Http\Controllers\Admin\CourseController;
-use App\Http\Controllers\Admin\CourseIntakeController;
-use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\ProfileController;
-use App\Http\Controllers\Admin\CourseProviderController;
 use App\Http\Controllers\Admin\RolePermissionController;
-use App\Http\Controllers\Admin\ScholarshipController;
 use App\Http\Controllers\Admin\SubscriberController;
-use App\Http\Controllers\Admin\UniversityController;
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Admin\CounsellorController;
-use App\Http\Controllers\Admin\LeadsController;
-use App\Http\Controllers\Admin\CounsellorBookingController;
-use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\SEO\Controllers\SeoController;
 use Illuminate\Support\Facades\Route;
@@ -54,41 +42,16 @@ Route::prefix('{role}')
         Route::resource('blogs', BlogController::class)
             ->middleware('permission:blog.manage');
 
-        Route::resource('events', EventController::class)
-            ->middleware('permission:event.manage');
+     
 
         Route::resource('roles-permissions', RolePermissionController::class);
 
         Route::resource('users', UserController::class);
-        Route::resource('universities', UniversityController::class);
-        Route::get('campuses/cities', [CampusController::class, 'cities'])
-            ->name('campuses.cities');
-        Route::resource('campuses', CampusController::class);
-        Route::resource('providers', CourseProviderController::class);
-        Route::resource('course-categories', CourseCategoryController::class);
-        Route::resource('courses', CourseController::class);
+       
+       
         Route::resource('contacts', ContactController::class);
         Route::resource('subscribers', SubscriberController::class);
         Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
         Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
-        Route::resource('course-intakes', CourseIntakeController::class);
-        Route::resource('scholarships', ScholarshipController::class);
-        Route::resource('counsellors', CounsellorController::class);
-
-        Route::get('event-leads', [LeadsController::class, 'eventLeads'])->name('event-leads.index');
-        Route::get('event-leads/{eventLead}', [LeadsController::class, 'show'])->name('event-leads.show');
-        Route::delete('/event-leads/{eventLead}', [LeadsController::class, 'destroy'])->name('event-leads.destroy');
-
-        Route::get('/account-settings', [CounsellorController::class, 'accountSetting'])->name('account.settings');
-
-        Route::put('/account-settings', [CounsellorController::class, 'updateAccountSetting'])->name('account.settings.update');
-
-        //booking session
-        Route::get('booking-sessions', [CounsellorBookingController::class, 'index'])->name('booking-sessions.index');
-        Route::get('booking-sessions/{bookingId}', [CounsellorBookingController::class, 'show'])->name('booking-sessions.show');
-        Route::delete('booking-sessions/{bookingId}', [CounsellorBookingController::class, 'destroy'])->name('booking-sessions.destroy');
-        Route::put('booking-sessions/{bookingId}', [CounsellorBookingController::class, 'update'])->name('booking-sessions.update');
-        Route::get('students', [StudentController::class, 'index'])->name('students.index');
-        Route::get('students/{student}', [StudentController::class, 'show'])->name('students.show');
-
+       
     });
