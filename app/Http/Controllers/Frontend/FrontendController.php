@@ -62,4 +62,7 @@ class FrontendController extends Controller
     public function owner(){
         return view('frontend.pages.teams.owner');
     }
+     public function patners(){
+        return view('frontend.pages.patner.index');
+    }
 }
