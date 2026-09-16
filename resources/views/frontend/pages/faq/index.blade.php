@@ -39,7 +39,7 @@
             {{-- LEFT SIDE --}}
             {{-- ===================================================== --}}
 
-            <div class="lg:col-span-4">
+            <div class="lg:col-span-4 lg:self-stretch">
 
                 <div class="lg:sticky lg:top-28">
 
