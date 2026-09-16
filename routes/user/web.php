@@ -25,6 +25,7 @@ Route::get('/how-we-works', [FrontendController::class, 'howWeWork'])->name('how
 Route::get('/patners', [FrontendController::class, 'patners'])->name('patners');
 Route::get('/about', [FrontendController::class, 'aboutPage'])->name('about');
 Route::get('/contact', [FrontendController::class, 'contactPage'])->name('contact');
+Route::get('/faqs', [FrontendController::class, 'faqs'])->name('faqs');
 Route::get('/privacy-policy', [FrontendController::class, 'privacyPolicy'])->name('privacy-policy');
 Route::get('/terms-conditions', [FrontendController::class, 'termsConditions'])->name('terms-conditions');
 

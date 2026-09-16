@@ -24,7 +24,7 @@
                  <h4 class="text-white text-base font-bold uppercase tracking-wider mb-4">About us</h4>
                  <ul class="space-y-2 text-[15px]">
                      <li><a href="{{ route('about') }}" class="hover:text-brand-400 transition">About Us</a></li>
-                     <li><a href="#" class="hover:text-brand-400 transition">FAQs</a></li>
+                     <li><a href="{{ route('faqs') }}" class="hover:text-brand-400 transition">FAQs</a></li>
                      <li><a href="#" class="hover:text-brand-400 transition">Our Partners</a></li>
                      <li><a href="{{ route('terms-conditions')}}" class="hover:text-brand-400 transition">Terms and Conditions</a></li>
                      <li><a href="{{ route('privacy-policy') }}" class="hover:text-brand-400 transition">Privacy Policy</a></li>

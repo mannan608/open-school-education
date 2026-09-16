@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\File;
 class FrontendController extends Controller
 {
 
+
     public function homePage()
     {
           $industries = json_decode(
@@ -64,5 +65,8 @@ class FrontendController extends Controller
     }
      public function patners(){
         return view('frontend.pages.patner.index');
+    }
+      public function faqs(){
+        return view('frontend.pages.faq.index');
     }
 }

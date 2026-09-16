@@ -765,30 +765,7 @@
 
 
                                 {{-- Answer --}}
-                                {{-- <div
-                x-show="active === index"
-                x-collapse.duration.300ms>
-
-                <div class="border-t border-slate-100 px-5 pb-6 pt-5 sm:px-6">
-
-                    <div class="flex gap-4">
-
-                        <div
-                            class="hidden h-8 w-1 shrink-0 rounded-full bg-secondary-400 sm:block">
-                        </div>
-
-                        <p
-                            class="text-sm leading-7 text-slate-600 sm:text-[15px]"
-                            x-text="faq.answer">
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div> --}}
-
-                                {{-- Answer --}}
+                            
 
                                 <div x-show="active === index" x-collapse.duration.300ms>
                                     <div class="border-t border-slate-100 px-5 pb-6 pt-5 sm:px-6">
