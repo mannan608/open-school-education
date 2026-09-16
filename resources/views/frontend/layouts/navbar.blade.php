@@ -38,10 +38,10 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-4 md:gap-6 lg:gap-8 text-sm font-medium uppercase">
-                    {{-- Services --}}
-                    <a href="#"
+                    {{-- about --}}
+                    <a href="{{ route('about') }}"
                         class="relative font-medium transition-all duration-300
-                            {{ request()->routeIs('services') ? 'text-brand-600 font-medium after:w-full' : 'text-neutral-600 hover:text-brand-600 after:w-0 hover:after:w-full' }}
+                            {{ request()->routeIs('about') ? 'text-brand-600 font-medium after:w-full' : 'text-neutral-600 hover:text-brand-600 after:w-0 hover:after:w-full' }}
                             after:absolute after:left-0 after:-bottom-1.5
                             after:h-0.5 after:bg-brand-600 after:transition-all after:duration-300">
                         About Us
@@ -102,10 +102,10 @@
                         Our Partners
                     </a>
 
-                    {{-- Destinations --}}
-                    <a href="#"
+                    {{-- contact --}}
+                    <a href="{{ route('contact') }}"
                         class="relative font-medium transition-all duration-300
-                            {{ request()->routeIs('destinations') ? 'text-brand-600 font-medium after:w-full' : 'text-neutral-600 hover:text-brand-600 after:w-0 hover:after:w-full' }}
+                            {{ request()->routeIs('contact') ? 'text-brand-600 font-medium after:w-full' : 'text-neutral-600 hover:text-brand-600 after:w-0 hover:after:w-full' }}
                             after:absolute after:left-0 after:-bottom-1.5
                             after:h-0.5 after:bg-brand-600 after:transition-all after:duration-300">
                         Contact Us
@@ -129,8 +129,8 @@
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-200 shadow-lg">
 
             <div class="flex flex-col px-6 py-5 space-y-3 text-base font-medium">
-                <a href="#"
-                    class="{{ request()->routeIs('services') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">About
+                <a href="{{ route('about') }}"
+                    class="{{ request()->routeIs('about') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">About
                     Us</a>
                 <a href="#"
                     class="{{ request()->routeIs('courses') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Courses</a>
@@ -140,8 +140,8 @@
                 <a href="#"
                     class="{{ request()->routeIs('events') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Our
                     Partners</a>
-                <a href="#"
-                    class="{{ request()->routeIs('destinations') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Contact
+                <a href="{{ route('contact') }}"
+                    class="{{ request()->routeIs('contact') ? 'text-neutral-600 font-medium' : 'text-neutral-600' }}">Contact
                     Us</a>
 
 
